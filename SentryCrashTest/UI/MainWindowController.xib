@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="SentryCrashTest" customModuleProvider="target">
+            <connections>
+                <outlet property="window" destination="tGG-NN-dbX" id="iPG-o7-N4T"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Sentry Crash Test" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="tGG-NN-dbX">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="390" width="337" height="407"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2880" height="1595"/>
+            <view key="contentView" id="aNY-TT-Mvg">
+                <rect key="frame" x="0.0" y="0.0" width="440" height="435"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bq2-dP-c2J">
+                        <rect key="frame" x="20" y="20" width="400" height="395"/>
+                        <subviews>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lQU-RP-PTU">
+                                <rect key="frame" x="99" y="364" width="202" height="31"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Sentry Crash Test" id="S4B-I6-2ZM">
+                                    <font key="font" textStyle="largeTitle" name=".SFNS-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Odc-Kj-fq7">
+                                <rect key="frame" x="0.0" y="356" width="400" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="BVW-US-c4X"/>
+                                </constraints>
+                            </customView>
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="LJ2-ny-6Nv">
+                                <rect key="frame" x="0.0" y="345" width="400" height="5"/>
+                            </box>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="yYk-Ov-4EN">
+                                <rect key="frame" x="0.0" y="334" width="400" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="7Dt-l5-u3C"/>
+                                </constraints>
+                            </customView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-9T-aak">
+                                <rect key="frame" x="91" y="299" width="219" height="32"/>
+                                <buttonCell key="cell" type="push" title="Objective-C Exception" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Aam-i2-FPB">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="crash_ObjCException:" target="-2" id="p0c-8E-0e3"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lQk-jp-KTZ">
+                                <rect key="frame" x="91" y="271" width="219" height="32"/>
+                                <buttonCell key="cell" type="push" title="C++ Exception" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6E2-N5-kge">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="crash_CPPException:" target="-2" id="3Nl-Qe-2oh"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="37K-hw-R1s">
+                                <rect key="frame" x="91" y="243" width="219" height="32"/>
+                                <buttonCell key="cell" type="push" title="Segmentation Fault / Bus Error" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EuH-Rx-wzs">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="crash_SegmentationFault:" target="-2" id="Fjx-Sc-vB7"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qrD-5Q-2Qm">
+                                <rect key="frame" x="91" y="215" width="219" height="32"/>
+                                <buttonCell key="cell" type="push" title="Abort" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jIP-1V-g0h">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="crash_Abort:" target="-2" id="0zq-Zc-E09"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kr9-vw-TyD">
+                                <rect key="frame" x="91" y="187" width="219" height="32"/>
+                                <buttonCell key="cell" type="push" title="Stack Overflow" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9ha-Ej-BV4">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="crash_StackOverflow:" target="-2" id="mpd-gx-X0C"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P7p-ze-Rxl">
+                                <rect key="frame" x="91" y="159" width="219" height="32"/>
+                                <buttonCell key="cell" type="push" title="Swift Fatal Error" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WVv-PT-rgd">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="crash_SwiftFatalError:" target="-2" id="MYJ-23-zHc"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QYN-sA-KSw">
+                                <rect key="frame" x="91" y="131" width="219" height="32"/>
+                                <buttonCell key="cell" type="push" title="Swift Exception" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UhM-Mw-ijH">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="crash_SwiftException:" target="-2" id="8xr-R8-RYf"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GRg-rg-am0">
+                                <rect key="frame" x="91" y="103" width="219" height="32"/>
+                                <buttonCell key="cell" type="push" title="Swift Unwrap" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HxB-yk-gdc">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="crash_SwiftUnwrap:" target="-2" id="h6n-WD-3jX"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ae2-P0-3HM">
+                                <rect key="frame" x="91" y="75" width="219" height="32"/>
+                                <buttonCell key="cell" type="push" title="Swift Overflow" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YMt-uh-DLa">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="crash_SwiftOverflow:" target="-2" id="s7j-75-bhQ"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O2l-YA-xrJ">
+                                <rect key="frame" x="91" y="47" width="219" height="32"/>
+                                <buttonCell key="cell" type="push" title="Main Thread Hang" bezelStyle="rounded" imagePosition="right" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aZd-KW-CjC">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="hang:" target="-2" id="jyo-ES-Scv"/>
+                                </connections>
+                            </button>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="vw4-nT-lxq">
+                                <rect key="frame" x="0.0" y="46" width="400" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="Ew7-6z-9rE"/>
+                                </constraints>
+                            </customView>
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="P8i-k0-U4n">
+                                <rect key="frame" x="0.0" y="35" width="400" height="5"/>
+                            </box>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="LlD-97-eQy">
+                                <rect key="frame" x="0.0" y="24" width="400" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="vyA-mO-J3d"/>
+                                </constraints>
+                            </customView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="egg-ds-sZi">
+                                <rect key="frame" x="119" y="-1" width="160" height="18"/>
+                                <buttonCell key="cell" type="check" title="Crash on Main Thread" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="m5u-LF-Mck">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="self.crashOnMainThread" id="n78-h6-7hG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ae2-P0-3HM" firstAttribute="width" secondItem="O2l-YA-xrJ" secondAttribute="width" id="5Ps-6p-Dcs"/>
+                            <constraint firstItem="lQk-jp-KTZ" firstAttribute="width" secondItem="37K-hw-R1s" secondAttribute="width" id="8rx-8F-cLx"/>
+                            <constraint firstItem="QYN-sA-KSw" firstAttribute="width" secondItem="GRg-rg-am0" secondAttribute="width" id="AUV-VA-4Kc"/>
+                            <constraint firstItem="qrD-5Q-2Qm" firstAttribute="width" secondItem="Kr9-vw-TyD" secondAttribute="width" id="Kdn-5Y-dte"/>
+                            <constraint firstAttribute="trailing" secondItem="LJ2-ny-6Nv" secondAttribute="trailing" id="Lo7-PF-Gmw"/>
+                            <constraint firstItem="Kr9-vw-TyD" firstAttribute="width" secondItem="P7p-ze-Rxl" secondAttribute="width" id="MMR-LL-18t"/>
+                            <constraint firstItem="HRF-9T-aak" firstAttribute="width" secondItem="lQk-jp-KTZ" secondAttribute="width" id="Mmy-QQ-ZxP"/>
+                            <constraint firstItem="GRg-rg-am0" firstAttribute="width" secondItem="ae2-P0-3HM" secondAttribute="width" id="OO1-ez-TfQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Odc-Kj-fq7" secondAttribute="trailing" id="RgW-67-FIw"/>
+                            <constraint firstItem="LJ2-ny-6Nv" firstAttribute="leading" secondItem="Bq2-dP-c2J" secondAttribute="leading" id="WdY-oh-uXZ"/>
+                            <constraint firstItem="Odc-Kj-fq7" firstAttribute="leading" secondItem="Bq2-dP-c2J" secondAttribute="leading" id="Zh4-CE-hsG"/>
+                            <constraint firstAttribute="width" constant="400" id="a6u-qq-8es"/>
+                            <constraint firstAttribute="trailing" secondItem="yYk-Ov-4EN" secondAttribute="trailing" id="mLz-vv-9uL"/>
+                            <constraint firstItem="yYk-Ov-4EN" firstAttribute="leading" secondItem="Bq2-dP-c2J" secondAttribute="leading" id="wND-50-DZ3"/>
+                            <constraint firstItem="P7p-ze-Rxl" firstAttribute="width" secondItem="QYN-sA-KSw" secondAttribute="width" id="x2k-bz-2P9"/>
+                            <constraint firstItem="37K-hw-R1s" firstAttribute="width" secondItem="qrD-5Q-2Qm" secondAttribute="width" id="yhc-Nl-KIc"/>
+                        </constraints>
+                        <visibilityPriorities>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                        </visibilityPriorities>
+                        <customSpacing>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                        </customSpacing>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Bq2-dP-c2J" secondAttribute="trailing" constant="20" symbolic="YES" id="ORq-z5-6ds"/>
+                    <constraint firstItem="Bq2-dP-c2J" firstAttribute="top" secondItem="aNY-TT-Mvg" secondAttribute="top" constant="20" symbolic="YES" id="cdw-Aq-3GG"/>
+                    <constraint firstAttribute="bottom" secondItem="Bq2-dP-c2J" secondAttribute="bottom" constant="20" symbolic="YES" id="d1Z-kb-5OQ"/>
+                    <constraint firstItem="Bq2-dP-c2J" firstAttribute="leading" secondItem="aNY-TT-Mvg" secondAttribute="leading" constant="20" symbolic="YES" id="dPB-ut-ZzW"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="-83.5" y="394.5"/>
+        </window>
+    </objects>
+</document>
