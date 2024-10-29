@@ -12,6 +12,8 @@ SentryCrashTest
 
 Test application for the Sentry macOS SDK.
 
+![Screenshot](Assets/Screenshot.png "Screenshot")
+
 License
 -------
 
