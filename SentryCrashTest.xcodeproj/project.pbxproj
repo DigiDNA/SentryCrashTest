@@ -17,7 +17,27 @@
 		0570D3EA2CCFE22700449D87 /* CrashReportWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0570D3E92CCFE22700449D87 /* CrashReportWindowController.xib */; };
 		0570D3EC2CD0E15A00449D87 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0570D3EB2CD0E15A00449D87 /* MainWindowController.swift */; };
 		0570D3EE2CD0E1B900449D87 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0570D3ED2CD0E1B900449D87 /* MainWindowController.xib */; };
+		05FA6E8C2CD140C800421ED6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA6E8A2CD140C800421ED6 /* main.swift */; };
+		05FA6E8F2CD1412600421ED6 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 05FA6E8E2CD1412600421ED6 /* ArgumentParser */; };
+		05FA6E912CD141E200421ED6 /* report.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05FA6E902CD1419400421ED6 /* report.json */; };
+		05FA6E932CD144E400421ED6 /* ThreadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA6E922CD144E100421ED6 /* ThreadInfo.swift */; };
+		05FA6E962CD15AC100421ED6 /* Stacktrace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA6E952CD15ABE00421ED6 /* Stacktrace.swift */; };
+		05FA6E982CD15DDB00421ED6 /* Stackframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA6E972CD15DDA00421ED6 /* Stackframe.swift */; };
+		05FA6E9A2CD15FD400421ED6 /* UInt64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA6E992CD15FCD00421ED6 /* UInt64.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		05FA6E812CD140B400421ED6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				05FA6E912CD141E200421ED6 /* report.json in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		051EB48A2CCF9C0C004837E2 /* SentryCrashTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SentryCrashTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +99,13 @@
 		0570D42E2CD0FEB700449D87 /* Release - ccache.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release - ccache.xcconfig"; sourceTree = "<group>"; };
 		0570D42F2CD0FEB700449D87 /* Release - Library.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release - Library.xcconfig"; sourceTree = "<group>"; };
 		0570D4302CD0FEB700449D87 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		05FA6E832CD140B400421ED6 /* SentryToCrashReport */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SentryToCrashReport; sourceTree = BUILT_PRODUCTS_DIR; };
+		05FA6E8A2CD140C800421ED6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		05FA6E902CD1419400421ED6 /* report.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = report.json; sourceTree = "<group>"; };
+		05FA6E922CD144E100421ED6 /* ThreadInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadInfo.swift; sourceTree = "<group>"; };
+		05FA6E952CD15ABE00421ED6 /* Stacktrace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stacktrace.swift; sourceTree = "<group>"; };
+		05FA6E972CD15DDA00421ED6 /* Stackframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stackframe.swift; sourceTree = "<group>"; };
+		05FA6E992CD15FCD00421ED6 /* UInt64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UInt64.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +117,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05FA6E802CD140B400421ED6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05FA6E8F2CD1412600421ED6 /* ArgumentParser in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -98,6 +133,7 @@
 			children = (
 				0570D4312CD0FEB700449D87 /* xcconfig */,
 				051EB48C2CCF9C0C004837E2 /* SentryCrashTest */,
+				05FA6E8B2CD140C800421ED6 /* SentryToCrashReport */,
 				051EB48B2CCF9C0C004837E2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				051EB48A2CCF9C0C004837E2 /* SentryCrashTest.app */,
+				05FA6E832CD140B400421ED6 /* SentryToCrashReport */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,6 +316,19 @@
 			path = Submodules/xcconfig;
 			sourceTree = "<group>";
 		};
+		05FA6E8B2CD140C800421ED6 /* SentryToCrashReport */ = {
+			isa = PBXGroup;
+			children = (
+				05FA6E902CD1419400421ED6 /* report.json */,
+				05FA6E8A2CD140C800421ED6 /* main.swift */,
+				05FA6E972CD15DDA00421ED6 /* Stackframe.swift */,
+				05FA6E952CD15ABE00421ED6 /* Stacktrace.swift */,
+				05FA6E922CD144E100421ED6 /* ThreadInfo.swift */,
+				05FA6E992CD15FCD00421ED6 /* UInt64.swift */,
+			);
+			path = SentryToCrashReport;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -302,6 +352,26 @@
 			productReference = 051EB48A2CCF9C0C004837E2 /* SentryCrashTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		05FA6E822CD140B400421ED6 /* SentryToCrashReport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05FA6E892CD140B400421ED6 /* Build configuration list for PBXNativeTarget "SentryToCrashReport" */;
+			buildPhases = (
+				05FA6E7F2CD140B400421ED6 /* Sources */,
+				05FA6E802CD140B400421ED6 /* Frameworks */,
+				05FA6E812CD140B400421ED6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SentryToCrashReport;
+			packageProductDependencies = (
+				05FA6E8E2CD1412600421ED6 /* ArgumentParser */,
+			);
+			productName = SentryToCrashReport;
+			productReference = 05FA6E832CD140B400421ED6 /* SentryToCrashReport */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -309,12 +379,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					051EB4892CCF9C0C004837E2 = {
 						CreatedOnToolsVersion = 15.4;
 						LastSwiftMigration = 1540;
+					};
+					05FA6E822CD140B400421ED6 = {
+						CreatedOnToolsVersion = 16.1;
 					};
 				};
 			};
@@ -329,12 +402,14 @@
 			mainGroup = 051EB4812CCF9C0C004837E2;
 			packageReferences = (
 				051EB49A2CCF9C9E004837E2 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+				05FA6E8D2CD1412600421ED6 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
 			);
 			productRefGroup = 051EB48B2CCF9C0C004837E2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				051EB4892CCF9C0C004837E2 /* SentryCrashTest */,
+				05FA6E822CD140B400421ED6 /* SentryToCrashReport */,
 			);
 		};
 /* End PBXProject section */
@@ -363,6 +438,18 @@
 				051EB4A42CCFA0FA004837E2 /* CrashHelper.mm in Sources */,
 				0570D3E82CCFE22100449D87 /* CrashReportWindowController.swift in Sources */,
 				0570D3EC2CD0E15A00449D87 /* MainWindowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05FA6E7F2CD140B400421ED6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05FA6E982CD15DDB00421ED6 /* Stackframe.swift in Sources */,
+				05FA6E962CD15AC100421ED6 /* Stacktrace.swift in Sources */,
+				05FA6E9A2CD15FD400421ED6 /* UInt64.swift in Sources */,
+				05FA6E8C2CD140C800421ED6 /* main.swift in Sources */,
+				05FA6E932CD144E400421ED6 /* ThreadInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +529,22 @@
 			};
 			name = Release;
 		};
+		05FA6E872CD140B400421ED6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		05FA6E882CD140B400421ED6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -463,6 +566,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		05FA6E892CD140B400421ED6 /* Build configuration list for PBXNativeTarget "SentryToCrashReport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05FA6E872CD140B400421ED6 /* Debug */,
+				05FA6E882CD140B400421ED6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -474,6 +586,14 @@
 				minimumVersion = 8.39.0;
 			};
 		};
+		05FA6E8D2CD1412600421ED6 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -481,6 +601,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 051EB49A2CCF9C9E004837E2 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
 			productName = Sentry;
+		};
+		05FA6E8E2CD1412600421ED6 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05FA6E8D2CD1412600421ED6 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

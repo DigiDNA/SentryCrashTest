@@ -1,0 +1,2969 @@
+{
+  "event_id": "f3cff7078dab4382ba4f1ed40f7d5072",
+  "project": 4508199836581968,
+  "release": "com.xs-labs.CrashTest@1.0.0+1",
+  "dist": "1",
+  "platform": "cocoa",
+  "message": "",
+  "datetime": "2024-10-29T09:19:17+00:00",
+  "tags": [
+    [
+      "app.device",
+      "d82ee9d7599fcd8eb314eb0386a05799c2cc098b"
+    ],
+    [
+      "device",
+      "Mac14,2"
+    ],
+    [
+      "device.family",
+      "macOS"
+    ],
+    [
+      "environment",
+      "production"
+    ],
+    [
+      "handled",
+      "no"
+    ],
+    [
+      "level",
+      "fatal"
+    ],
+    [
+      "mechanism",
+      "cpp_exception"
+    ],
+    [
+      "os",
+      "macOS 15.0.1"
+    ],
+    [
+      "os.name",
+      "macOS"
+    ],
+    [
+      "os.rooted",
+      "no"
+    ],
+    [
+      "dist",
+      "1"
+    ],
+    [
+      "release",
+      "com.xs-labs.CrashTest@1.0.0+1"
+    ],
+    [
+      "user",
+      "id:EAF02A4E-70D6-40E8-9055-A8D89DD5E263"
+    ]
+  ],
+  "_dsc": {
+    "environment": "production",
+    "public_key": "2ece6bf9843a3a1bddd234f98b670aea",
+    "release": "com.xs-labs.CrashTest@1.0.0+1",
+    "replay_id": null,
+    "trace_id": "dd35b403-a187-47ad-8657-3d5a1ca5fc5e",
+    "transaction": null
+  },
+  "_metrics": {
+    "bytes.ingested.event": 21852,
+    "bytes.stored.event": 79944,
+    "flag.processing.fatal": true
+  },
+  "breadcrumbs": {
+    "values": [
+      {
+        "timestamp": 1730193556.505,
+        "type": "debug",
+        "category": "started",
+        "level": "info",
+        "message": "Breadcrumb Tracking"
+      },
+      {
+        "timestamp": 1730193556.524,
+        "type": "navigation",
+        "category": "app.lifecycle",
+        "level": "info",
+        "data": {
+          "state": "foreground"
+        }
+      }
+    ]
+  },
+  "contexts": {
+    "app": {
+      "app_start_time": "2024-10-29T09:19:16Z",
+      "device_app_hash": "d82ee9d7599fcd8eb314eb0386a05799c2cc098b",
+      "build_type": "unknown",
+      "app_identifier": "com.xs-labs.CrashTest",
+      "app_name": "CrashTest",
+      "app_version": "1.0.0",
+      "app_build": "1",
+      "app_memory": 21544960,
+      "app_id": "CA3D75D6-D24D-3AEF-A0A4-1BC81BD8B163",
+      "type": "app"
+    },
+    "culture": {
+      "calendar": "Gregorian Calendar",
+      "display_name": "",
+      "is_24_hour_format": false,
+      "locale": "en_US@rg=chzzzz",
+      "timezone": "Europe/Zurich",
+      "type": "culture"
+    },
+    "device": {
+      "family": "macOS",
+      "model": "Mac14,2",
+      "arch": "arm64",
+      "simulator": false,
+      "memory_size": 25769803776,
+      "free_memory": 2285322240,
+      "usable_memory": 21886828544,
+      "locale": "en_US@rg=chzzzz",
+      "processor_count": 8,
+      "thermal_state": "fair",
+      "type": "device"
+    },
+    "os": {
+      "name": "macOS",
+      "version": "15.0.1",
+      "build": "24A348",
+      "kernel_version": "Darwin Kernel Version 24.0.0: Tue Sep 24 23:37:13 PDT 2024; root:xnu-11215.1.12~1/RELEASE_ARM64_T8112",
+      "rooted": false,
+      "type": "os"
+    }
+  },
+  "culprit": "",
+  "debug_meta": {
+    "images": [
+      {
+        "code_file": "/Users/macmade/Library/Developer/Xcode/DerivedData/CrashTest-dqvvkzxbpcrgegdqexrtinacoqhw/Build/Products/Release/CrashTest.app/Contents/MacOS/CrashTest",
+        "debug_id": "ca3d75d6-d24d-3aef-a0a4-1bc81bd8b163",
+        "image_addr": "0x104e88000",
+        "image_size": 868352,
+        "image_vmaddr": "0x100000000",
+        "candidates": [
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:android",
+            "source_name": "Android"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:ios",
+            "source_name": "Apple"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:microsoft",
+            "source_name": "Microsoft"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:nuget",
+            "source_name": "NuGet.org"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:project",
+            "source_name": "Sentry"
+          }
+        ],
+        "debug_status": "missing",
+        "features": {
+          "has_debug_info": false,
+          "has_sources": false,
+          "has_symbols": false,
+          "has_unwind_info": false
+        },
+        "type": "macho"
+      },
+      {
+        "code_file": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+        "debug_id": "45f61a5f-e825-33b6-94b9-3e0b02aa3ff3",
+        "arch": "arm64e",
+        "image_addr": "0x1856bc000",
+        "image_size": 14999552,
+        "image_vmaddr": "0x181698000",
+        "candidates": [
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:android",
+            "source_name": "Android"
+          },
+          {
+            "debug": {
+              "status": "ok"
+            },
+            "download": {
+              "features": {
+                "has_debug_info": false,
+                "has_sources": false,
+                "has_symbols": true,
+                "has_unwind_info": true
+              },
+              "status": "ok"
+            },
+            "source": "sentry:ios",
+            "source_name": "Apple"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:microsoft",
+            "source_name": "Microsoft"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:nuget",
+            "source_name": "NuGet.org"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:project",
+            "source_name": "Sentry"
+          },
+          {
+            "download": {
+              "features": {
+                "has_debug_info": false,
+                "has_sources": false,
+                "has_symbols": true,
+                "has_unwind_info": true
+              },
+              "status": "ok"
+            },
+            "source": "sentry:ios",
+            "source_name": "Apple"
+          }
+        ],
+        "debug_status": "found",
+        "features": {
+          "has_debug_info": false,
+          "has_sources": false,
+          "has_symbols": true,
+          "has_unwind_info": true
+        },
+        "type": "macho"
+      },
+      {
+        "code_file": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+        "debug_id": "1ad672c1-da68-3367-b947-93ae47652366",
+        "arch": "arm64e",
+        "image_addr": "0x1844dc000",
+        "image_size": 5206016,
+        "image_vmaddr": "0x1804b8000",
+        "candidates": [
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:android",
+            "source_name": "Android"
+          },
+          {
+            "debug": {
+              "status": "ok"
+            },
+            "download": {
+              "features": {
+                "has_debug_info": false,
+                "has_sources": false,
+                "has_symbols": true,
+                "has_unwind_info": true
+              },
+              "status": "ok"
+            },
+            "source": "sentry:ios",
+            "source_name": "Apple"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:microsoft",
+            "source_name": "Microsoft"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:nuget",
+            "source_name": "NuGet.org"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:project",
+            "source_name": "Sentry"
+          },
+          {
+            "download": {
+              "features": {
+                "has_debug_info": false,
+                "has_sources": false,
+                "has_symbols": true,
+                "has_unwind_info": true
+              },
+              "status": "ok"
+            },
+            "source": "sentry:ios",
+            "source_name": "Apple"
+          }
+        ],
+        "debug_status": "found",
+        "features": {
+          "has_debug_info": false,
+          "has_sources": false,
+          "has_symbols": true,
+          "has_unwind_info": true
+        },
+        "type": "macho"
+      },
+      {
+        "code_file": "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+        "debug_id": "c3a88646-1197-3efb-9645-95ea210842ab",
+        "arch": "arm64e",
+        "image_addr": "0x189b5a000",
+        "image_size": 3956736,
+        "image_vmaddr": "0x185b36000",
+        "candidates": [
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:android",
+            "source_name": "Android"
+          },
+          {
+            "debug": {
+              "status": "ok"
+            },
+            "download": {
+              "features": {
+                "has_debug_info": false,
+                "has_sources": false,
+                "has_symbols": true,
+                "has_unwind_info": true
+              },
+              "status": "ok"
+            },
+            "source": "sentry:ios",
+            "source_name": "Apple"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:microsoft",
+            "source_name": "Microsoft"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:nuget",
+            "source_name": "NuGet.org"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:project",
+            "source_name": "Sentry"
+          },
+          {
+            "download": {
+              "features": {
+                "has_debug_info": false,
+                "has_sources": false,
+                "has_symbols": true,
+                "has_unwind_info": true
+              },
+              "status": "ok"
+            },
+            "source": "sentry:ios",
+            "source_name": "Apple"
+          }
+        ],
+        "debug_status": "found",
+        "features": {
+          "has_debug_info": false,
+          "has_sources": false,
+          "has_symbols": true,
+          "has_unwind_info": true
+        },
+        "type": "macho"
+      },
+      {
+        "code_file": "/usr/lib/system/libsystem_c.dylib",
+        "debug_id": "a63f0ef9-59f1-3976-8a7e-2037cd50c605",
+        "arch": "arm64e",
+        "image_addr": "0x184306000",
+        "image_size": 532476,
+        "image_vmaddr": "0x1802e2000",
+        "candidates": [
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:android",
+            "source_name": "Android"
+          },
+          {
+            "debug": {
+              "status": "ok"
+            },
+            "download": {
+              "features": {
+                "has_debug_info": false,
+                "has_sources": false,
+                "has_symbols": true,
+                "has_unwind_info": true
+              },
+              "status": "ok"
+            },
+            "source": "sentry:ios",
+            "source_name": "Apple"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:microsoft",
+            "source_name": "Microsoft"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:nuget",
+            "source_name": "NuGet.org"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:project",
+            "source_name": "Sentry"
+          },
+          {
+            "download": {
+              "features": {
+                "has_debug_info": false,
+                "has_sources": false,
+                "has_symbols": true,
+                "has_unwind_info": true
+              },
+              "status": "ok"
+            },
+            "source": "sentry:ios",
+            "source_name": "Apple"
+          }
+        ],
+        "debug_status": "found",
+        "features": {
+          "has_debug_info": false,
+          "has_sources": false,
+          "has_symbols": true,
+          "has_unwind_info": true
+        },
+        "type": "macho"
+      },
+      {
+        "code_file": "/usr/lib/system/libsystem_kernel.dylib",
+        "debug_id": "616eb42e-c350-321e-8002-fb82bd999276",
+        "arch": "arm64e",
+        "image_addr": "0x184431000",
+        "image_size": 241656,
+        "image_vmaddr": "0x18040d000",
+        "candidates": [
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:android",
+            "source_name": "Android"
+          },
+          {
+            "debug": {
+              "status": "ok"
+            },
+            "download": {
+              "features": {
+                "has_debug_info": false,
+                "has_sources": false,
+                "has_symbols": true,
+                "has_unwind_info": true
+              },
+              "status": "ok"
+            },
+            "source": "sentry:ios",
+            "source_name": "Apple"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:microsoft",
+            "source_name": "Microsoft"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:nuget",
+            "source_name": "NuGet.org"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:project",
+            "source_name": "Sentry"
+          },
+          {
+            "download": {
+              "features": {
+                "has_debug_info": false,
+                "has_sources": false,
+                "has_symbols": true,
+                "has_unwind_info": true
+              },
+              "status": "ok"
+            },
+            "source": "sentry:ios",
+            "source_name": "Apple"
+          }
+        ],
+        "debug_status": "found",
+        "features": {
+          "has_debug_info": false,
+          "has_sources": false,
+          "has_symbols": true,
+          "has_unwind_info": true
+        },
+        "type": "macho"
+      },
+      {
+        "code_file": "/usr/lib/system/libsystem_pthread.dylib",
+        "debug_id": "d09f4078-adad-3dd0-b17b-ce0142887b28",
+        "arch": "arm64e",
+        "image_addr": "0x18446c000",
+        "image_size": 53248,
+        "image_vmaddr": "0x180448000",
+        "candidates": [
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:android",
+            "source_name": "Android"
+          },
+          {
+            "debug": {
+              "status": "ok"
+            },
+            "download": {
+              "features": {
+                "has_debug_info": false,
+                "has_sources": false,
+                "has_symbols": true,
+                "has_unwind_info": true
+              },
+              "status": "ok"
+            },
+            "source": "sentry:ios",
+            "source_name": "Apple"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:microsoft",
+            "source_name": "Microsoft"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:nuget",
+            "source_name": "NuGet.org"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:project",
+            "source_name": "Sentry"
+          },
+          {
+            "download": {
+              "features": {
+                "has_debug_info": false,
+                "has_sources": false,
+                "has_symbols": true,
+                "has_unwind_info": true
+              },
+              "status": "ok"
+            },
+            "source": "sentry:ios",
+            "source_name": "Apple"
+          }
+        ],
+        "debug_status": "found",
+        "features": {
+          "has_debug_info": false,
+          "has_sources": false,
+          "has_symbols": true,
+          "has_unwind_info": true
+        },
+        "type": "macho"
+      },
+      {
+        "code_file": "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+        "debug_id": "eb0e3194-641d-38a6-887c-d03042e0e85c",
+        "arch": "arm64e",
+        "image_addr": "0x188062000",
+        "image_size": 20795392,
+        "image_vmaddr": "0x18403e000",
+        "candidates": [
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:android",
+            "source_name": "Android"
+          },
+          {
+            "debug": {
+              "status": "ok"
+            },
+            "download": {
+              "features": {
+                "has_debug_info": false,
+                "has_sources": false,
+                "has_symbols": true,
+                "has_unwind_info": true
+              },
+              "status": "ok"
+            },
+            "source": "sentry:ios",
+            "source_name": "Apple"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:microsoft",
+            "source_name": "Microsoft"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:nuget",
+            "source_name": "NuGet.org"
+          },
+          {
+            "download": {
+              "status": "notfound"
+            },
+            "source": "sentry:project",
+            "source_name": "Sentry"
+          },
+          {
+            "download": {
+              "features": {
+                "has_debug_info": false,
+                "has_sources": false,
+                "has_symbols": true,
+                "has_unwind_info": true
+              },
+              "status": "ok"
+            },
+            "source": "sentry:ios",
+            "source_name": "Apple"
+          }
+        ],
+        "debug_status": "found",
+        "features": {
+          "has_debug_info": false,
+          "has_sources": false,
+          "has_symbols": true,
+          "has_unwind_info": true
+        },
+        "type": "macho"
+      }
+    ]
+  },
+  "environment": "production",
+  "errors": [
+    {
+      "type": "native_missing_dsym",
+      "image_path": "/Users/macmade/Library/Developer/Xcode/DerivedData/CrashTest-dqvvkzxbpcrgegdqexrtinacoqhw/Build/Products/Release/CrashTest.app/Contents/MacOS/CrashTest",
+      "image_uuid": "ca3d75d6-d24d-3aef-a0a4-1bc81bd8b163",
+      "message": "None"
+    }
+  ],
+  "exception": {
+    "values": [
+      {
+        "type": "C++ Exception",
+        "value": "St13runtime_error",
+        "thread_id": 0,
+        "mechanism": {
+          "type": "cpp_exception",
+          "handled": false,
+          "meta": {
+            "signal": {
+              "number": 6,
+              "code": 0,
+              "name": "SIGABRT"
+            },
+            "mach_exception": {
+              "exception": 10,
+              "code": 0,
+              "subcode": 0,
+              "name": "EXC_CRASH"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "fingerprint": [
+    "{{ default }}"
+  ],
+  "grouping_config": {
+    "enhancements": "KLUv_SAYwQAAkwKRs25ld3N0eWxlOjIwMjMtMDEtMTGQ",
+    "id": "newstyle:2023-01-11"
+  },
+  "hashes": [
+    "7deda28b16e69045736c866db019b5c3"
+  ],
+  "ingest_path": [
+    {
+      "version": "24.10.0",
+      "public_key": "7pLPdtCQBMLtodCJ3yOtI9MDBUWfX0k5eDa4ZP4CX6A"
+    }
+  ],
+  "key_id": "108288",
+  "level": "fatal",
+  "logger": "",
+  "metadata": {
+    "in_app_frame_mix": "mixed",
+    "type": "C++ Exception",
+    "value": "St13runtime_error"
+  },
+  "nodestore_insert": 1730193566.817915,
+  "received": 1730193564.945557,
+  "sdk": {
+    "name": "sentry.cocoa",
+    "version": "8.39.0",
+    "features": [
+      "captureFailedRequests"
+    ]
+  },
+  "threads": {
+    "values": [
+      {
+        "id": 1,
+        "stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_wqthread",
+              "symbol": "_pthread_wqthread",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x18446f420",
+              "symbol_addr": "0x18446f2b8"
+            },
+            {
+              "function": "__workq_kernreturn",
+              "symbol": "__workq_kernreturn",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184433a84",
+              "symbol_addr": "0x184433a7c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x40001000",
+            "fp": "0x16affeb50",
+            "lr": "0x18446f424",
+            "pc": "0x184433a84",
+            "sp": "0x16affeb30",
+            "x0": "0x100",
+            "x1": "0x16affeb80",
+            "x10": "0x88",
+            "x11": "0x9ffef",
+            "x12": "0x1",
+            "x13": "0x2",
+            "x14": "0x16affebd0",
+            "x15": "0x16affebd0",
+            "x16": "0x170",
+            "x17": "0x1f0d8c0f8",
+            "x18": "0x0",
+            "x19": "0x16afff000",
+            "x2": "0x2",
+            "x20": "0x1",
+            "x21": "0x16afff0a0",
+            "x22": "0x16afff098",
+            "x23": "0x0",
+            "x24": "0x0",
+            "x25": "0x0",
+            "x26": "0x0",
+            "x27": "0x0",
+            "x28": "0x0",
+            "x3": "0x0",
+            "x4": "0x60002000000100",
+            "x5": "0x600001a89ab8",
+            "x6": "0xb",
+            "x7": "0x3f800000",
+            "x8": "0x600001a89a81",
+            "x9": "0x5a0c5f4425ea0045"
+          }
+        },
+        "raw_stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_wqthread",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x18446f424",
+              "symbol_addr": "0x18446f2b8"
+            },
+            {
+              "function": "__workq_kernreturn",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184433a84",
+              "symbol_addr": "0x184433a7c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x40001000",
+            "fp": "0x16affeb50",
+            "lr": "0x18446f424",
+            "pc": "0x184433a84",
+            "sp": "0x16affeb30",
+            "x0": "0x100",
+            "x1": "0x16affeb80",
+            "x10": "0x88",
+            "x11": "0x9ffef",
+            "x12": "0x1",
+            "x13": "0x2",
+            "x14": "0x16affebd0",
+            "x15": "0x16affebd0",
+            "x16": "0x170",
+            "x17": "0x1f0d8c0f8",
+            "x18": "0x0",
+            "x19": "0x16afff000",
+            "x2": "0x2",
+            "x20": "0x1",
+            "x21": "0x16afff0a0",
+            "x22": "0x16afff098",
+            "x23": "0x0",
+            "x24": "0x0",
+            "x25": "0x0",
+            "x26": "0x0",
+            "x27": "0x0",
+            "x28": "0x0",
+            "x3": "0x0",
+            "x4": "0x60002000000100",
+            "x5": "0x600001a89ab8",
+            "x6": "0xb",
+            "x7": "0x3f800000",
+            "x8": "0x600001a89a81",
+            "x9": "0x5a0c5f4425ea0045"
+          }
+        },
+        "crashed": false,
+        "current": false,
+        "main": false
+      },
+      {
+        "id": 2,
+        "stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_wqthread",
+              "symbol": "_pthread_wqthread",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x18446f420",
+              "symbol_addr": "0x18446f2b8"
+            },
+            {
+              "function": "__workq_kernreturn",
+              "symbol": "__workq_kernreturn",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184433a84",
+              "symbol_addr": "0x184433a7c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x40001000",
+            "fp": "0x16b08afe0",
+            "lr": "0x18446f424",
+            "pc": "0x184433a84",
+            "sp": "0x16b08afc0",
+            "x0": "0x4",
+            "x1": "0x0",
+            "x10": "0x0",
+            "x11": "0x60001000001400",
+            "x12": "0x800000001",
+            "x13": "0x20000000000000",
+            "x14": "0x40000000000000",
+            "x15": "0xffffff0000000000",
+            "x16": "0x170",
+            "x17": "0x1f0d8c0f8",
+            "x18": "0x0",
+            "x19": "0x16b08b000",
+            "x2": "0x0",
+            "x20": "0x0",
+            "x21": "0x0",
+            "x22": "0x64005",
+            "x23": "0x0",
+            "x24": "0x0",
+            "x25": "0x0",
+            "x26": "0x0",
+            "x27": "0x0",
+            "x28": "0x0",
+            "x3": "0x0",
+            "x4": "0x5ffc0000000000",
+            "x5": "0x0",
+            "x6": "0x0",
+            "x7": "0x0",
+            "x8": "0x0",
+            "x9": "0x0"
+          }
+        },
+        "raw_stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_wqthread",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x18446f424",
+              "symbol_addr": "0x18446f2b8"
+            },
+            {
+              "function": "__workq_kernreturn",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184433a84",
+              "symbol_addr": "0x184433a7c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x40001000",
+            "fp": "0x16b08afe0",
+            "lr": "0x18446f424",
+            "pc": "0x184433a84",
+            "sp": "0x16b08afc0",
+            "x0": "0x4",
+            "x1": "0x0",
+            "x10": "0x0",
+            "x11": "0x60001000001400",
+            "x12": "0x800000001",
+            "x13": "0x20000000000000",
+            "x14": "0x40000000000000",
+            "x15": "0xffffff0000000000",
+            "x16": "0x170",
+            "x17": "0x1f0d8c0f8",
+            "x18": "0x0",
+            "x19": "0x16b08b000",
+            "x2": "0x0",
+            "x20": "0x0",
+            "x21": "0x0",
+            "x22": "0x64005",
+            "x23": "0x0",
+            "x24": "0x0",
+            "x25": "0x0",
+            "x26": "0x0",
+            "x27": "0x0",
+            "x28": "0x0",
+            "x3": "0x0",
+            "x4": "0x5ffc0000000000",
+            "x5": "0x0",
+            "x6": "0x0",
+            "x7": "0x0",
+            "x8": "0x0",
+            "x9": "0x0"
+          }
+        },
+        "crashed": false,
+        "current": false,
+        "main": false
+      },
+      {
+        "id": 3,
+        "stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_wqthread",
+              "symbol": "_pthread_wqthread",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x18446f420",
+              "symbol_addr": "0x18446f2b8"
+            },
+            {
+              "function": "__workq_kernreturn",
+              "symbol": "__workq_kernreturn",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184433a84",
+              "symbol_addr": "0x184433a7c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x40001000",
+            "fp": "0x16b116b50",
+            "lr": "0x18446f424",
+            "pc": "0x184433a84",
+            "sp": "0x16b116b30",
+            "x0": "0x100",
+            "x1": "0x16b116b80",
+            "x10": "0x600001a88438",
+            "x11": "0x1",
+            "x12": "0x0",
+            "x13": "0x7",
+            "x14": "0x1",
+            "x15": "0x48",
+            "x16": "0x170",
+            "x17": "0x1f0d8c0f8",
+            "x18": "0x0",
+            "x19": "0x16b117000",
+            "x2": "0x1",
+            "x20": "0x1",
+            "x21": "0x16b1170a0",
+            "x22": "0x16b117098",
+            "x23": "0x0",
+            "x24": "0x0",
+            "x25": "0x0",
+            "x26": "0x0",
+            "x27": "0x0",
+            "x28": "0x0",
+            "x3": "0x0",
+            "x4": "0x600001f82fc0",
+            "x5": "0x16b116430",
+            "x6": "0xb",
+            "x7": "0x3f800000",
+            "x8": "0x600001a88401",
+            "x9": "0x16b116b80"
+          }
+        },
+        "raw_stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_wqthread",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x18446f424",
+              "symbol_addr": "0x18446f2b8"
+            },
+            {
+              "function": "__workq_kernreturn",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184433a84",
+              "symbol_addr": "0x184433a7c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x40001000",
+            "fp": "0x16b116b50",
+            "lr": "0x18446f424",
+            "pc": "0x184433a84",
+            "sp": "0x16b116b30",
+            "x0": "0x100",
+            "x1": "0x16b116b80",
+            "x10": "0x600001a88438",
+            "x11": "0x1",
+            "x12": "0x0",
+            "x13": "0x7",
+            "x14": "0x1",
+            "x15": "0x48",
+            "x16": "0x170",
+            "x17": "0x1f0d8c0f8",
+            "x18": "0x0",
+            "x19": "0x16b117000",
+            "x2": "0x1",
+            "x20": "0x1",
+            "x21": "0x16b1170a0",
+            "x22": "0x16b117098",
+            "x23": "0x0",
+            "x24": "0x0",
+            "x25": "0x0",
+            "x26": "0x0",
+            "x27": "0x0",
+            "x28": "0x0",
+            "x3": "0x0",
+            "x4": "0x600001f82fc0",
+            "x5": "0x16b116430",
+            "x6": "0xb",
+            "x7": "0x3f800000",
+            "x8": "0x600001a88401",
+            "x9": "0x16b116b80"
+          }
+        },
+        "crashed": false,
+        "current": false,
+        "main": false
+      },
+      {
+        "id": 4,
+        "stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_wqthread",
+              "symbol": "_pthread_wqthread",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x18446f420",
+              "symbol_addr": "0x18446f2b8"
+            },
+            {
+              "function": "__workq_kernreturn",
+              "symbol": "__workq_kernreturn",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184433a84",
+              "symbol_addr": "0x184433a7c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x40001000",
+            "fp": "0x16b1a2b50",
+            "lr": "0x18446f424",
+            "pc": "0x184433a84",
+            "sp": "0x16b1a2b30",
+            "x0": "0x100",
+            "x1": "0x16b1a2b80",
+            "x10": "0x600001ab97b8",
+            "x11": "0x1",
+            "x12": "0x0",
+            "x13": "0x7",
+            "x14": "0x1",
+            "x15": "0x48",
+            "x16": "0x170",
+            "x17": "0x1f0d8c0f8",
+            "x18": "0x0",
+            "x19": "0x16b1a3000",
+            "x2": "0x1",
+            "x20": "0x1",
+            "x21": "0x16b1a30a0",
+            "x22": "0x16b1a3098",
+            "x23": "0x0",
+            "x24": "0x0",
+            "x25": "0x0",
+            "x26": "0x0",
+            "x27": "0x0",
+            "x28": "0x0",
+            "x3": "0x0",
+            "x4": "0x190",
+            "x5": "0x10",
+            "x6": "0x0",
+            "x7": "0x0",
+            "x8": "0x600001ab9781",
+            "x9": "0x16b1a2b80"
+          }
+        },
+        "raw_stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_wqthread",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x18446f424",
+              "symbol_addr": "0x18446f2b8"
+            },
+            {
+              "function": "__workq_kernreturn",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184433a84",
+              "symbol_addr": "0x184433a7c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x40001000",
+            "fp": "0x16b1a2b50",
+            "lr": "0x18446f424",
+            "pc": "0x184433a84",
+            "sp": "0x16b1a2b30",
+            "x0": "0x100",
+            "x1": "0x16b1a2b80",
+            "x10": "0x600001ab97b8",
+            "x11": "0x1",
+            "x12": "0x0",
+            "x13": "0x7",
+            "x14": "0x1",
+            "x15": "0x48",
+            "x16": "0x170",
+            "x17": "0x1f0d8c0f8",
+            "x18": "0x0",
+            "x19": "0x16b1a3000",
+            "x2": "0x1",
+            "x20": "0x1",
+            "x21": "0x16b1a30a0",
+            "x22": "0x16b1a3098",
+            "x23": "0x0",
+            "x24": "0x0",
+            "x25": "0x0",
+            "x26": "0x0",
+            "x27": "0x0",
+            "x28": "0x0",
+            "x3": "0x0",
+            "x4": "0x190",
+            "x5": "0x10",
+            "x6": "0x0",
+            "x7": "0x0",
+            "x8": "0x600001ab9781",
+            "x9": "0x16b1a2b80"
+          }
+        },
+        "crashed": false,
+        "current": false,
+        "main": false
+      },
+      {
+        "id": 5,
+        "stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_wqthread",
+              "symbol": "_pthread_wqthread",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x18446f420",
+              "symbol_addr": "0x18446f2b8"
+            },
+            {
+              "function": "__workq_kernreturn",
+              "symbol": "__workq_kernreturn",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184433a84",
+              "symbol_addr": "0x184433a7c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x40001000",
+            "fp": "0x16b22eb60",
+            "lr": "0x18446f424",
+            "pc": "0x184433a84",
+            "sp": "0x16b22eb40",
+            "x0": "0x40",
+            "x1": "0x16b22eb80",
+            "x10": "0xffbffe0000000000",
+            "x11": "0x1000000000",
+            "x12": "0x1e8bb6e78",
+            "x13": "0xffef",
+            "x14": "0x1ffe2000000000",
+            "x15": "0x1ffe2000000000",
+            "x16": "0x170",
+            "x17": "0x1f0d8c0f8",
+            "x18": "0x0",
+            "x19": "0x16b22f000",
+            "x2": "0x1",
+            "x20": "0x1",
+            "x21": "0x16b22f0a0",
+            "x22": "0x16b22f098",
+            "x23": "0x0",
+            "x24": "0x0",
+            "x25": "0x0",
+            "x26": "0x0",
+            "x27": "0x0",
+            "x28": "0x0",
+            "x3": "0x0",
+            "x4": "0x5",
+            "x5": "0x0",
+            "x6": "0xfffffffc",
+            "x7": "0x1e",
+            "x8": "0x1",
+            "x9": "0x4002100000ec00"
+          }
+        },
+        "raw_stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_wqthread",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x18446f424",
+              "symbol_addr": "0x18446f2b8"
+            },
+            {
+              "function": "__workq_kernreturn",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184433a84",
+              "symbol_addr": "0x184433a7c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x40001000",
+            "fp": "0x16b22eb60",
+            "lr": "0x18446f424",
+            "pc": "0x184433a84",
+            "sp": "0x16b22eb40",
+            "x0": "0x40",
+            "x1": "0x16b22eb80",
+            "x10": "0xffbffe0000000000",
+            "x11": "0x1000000000",
+            "x12": "0x1e8bb6e78",
+            "x13": "0xffef",
+            "x14": "0x1ffe2000000000",
+            "x15": "0x1ffe2000000000",
+            "x16": "0x170",
+            "x17": "0x1f0d8c0f8",
+            "x18": "0x0",
+            "x19": "0x16b22f000",
+            "x2": "0x1",
+            "x20": "0x1",
+            "x21": "0x16b22f0a0",
+            "x22": "0x16b22f098",
+            "x23": "0x0",
+            "x24": "0x0",
+            "x25": "0x0",
+            "x26": "0x0",
+            "x27": "0x0",
+            "x28": "0x0",
+            "x3": "0x0",
+            "x4": "0x5",
+            "x5": "0x0",
+            "x6": "0xfffffffc",
+            "x7": "0x1e",
+            "x8": "0x1",
+            "x9": "0x4002100000ec00"
+          }
+        },
+        "crashed": false,
+        "current": false,
+        "main": false
+      },
+      {
+        "id": 6,
+        "stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_start",
+              "symbol": "_pthread_start",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x1844732e0",
+              "symbol_addr": "0x18447325c"
+            },
+            {
+              "function": "monitorCachedData",
+              "package": "/Users/macmade/Library/Developer/Xcode/DerivedData/CrashTest-dqvvkzxbpcrgegdqexrtinacoqhw/Build/Products/Release/CrashTest.app/Contents/MacOS/CrashTest",
+              "in_app": true,
+              "data": {
+                "symbolicator_status": "missing"
+              },
+              "image_addr": "0x104e88000",
+              "instruction_addr": "0x104ed71d0",
+              "symbol_addr": "0x104ed6f3c"
+            },
+            {
+              "function": "sleep",
+              "symbol": "sleep",
+              "package": "/usr/lib/system/libsystem_c.dylib",
+              "in_app": false,
+              "data": {
+                "category": "system",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184306000",
+              "instruction_addr": "0x18431d6f4",
+              "symbol_addr": "0x18431d6c4"
+            },
+            {
+              "function": "nanosleep",
+              "symbol": "nanosleep",
+              "package": "/usr/lib/system/libsystem_c.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184306000",
+              "instruction_addr": "0x184314710",
+              "symbol_addr": "0x184314638"
+            },
+            {
+              "function": "__semwait_signal",
+              "symbol": "__semwait_signal",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x1844353c8",
+              "symbol_addr": "0x1844353c0"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x40001000",
+            "fp": "0x16b2bab10",
+            "lr": "0x184314714",
+            "pc": "0x1844353c8",
+            "sp": "0x16b2baae0",
+            "x0": "0xa03",
+            "x1": "0x0",
+            "x10": "0x11",
+            "x11": "0x13c0",
+            "x12": "0x7fb",
+            "x13": "0x7fd",
+            "x14": "0x7ce36050",
+            "x15": "0x7cc35827",
+            "x16": "0x14e",
+            "x17": "0x1f0d8c048",
+            "x18": "0x0",
+            "x19": "0x16b2bab20",
+            "x2": "0x1",
+            "x20": "0x16b2bab30",
+            "x21": "0x104f90000",
+            "x22": "0x203",
+            "x23": "0x104f92b88",
+            "x24": "0x104f92000",
+            "x25": "0x104f92000",
+            "x26": "0x0",
+            "x27": "0x104f92000",
+            "x28": "0x0",
+            "x3": "0x1",
+            "x4": "0x1",
+            "x5": "0x0",
+            "x6": "0x34",
+            "x7": "0x0",
+            "x8": "0x1e8bbc528",
+            "x9": "0x4003"
+          }
+        },
+        "raw_stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_start",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x1844732e4",
+              "symbol_addr": "0x18447325c"
+            },
+            {
+              "function": "monitorCachedData",
+              "package": "/Users/macmade/Library/Developer/Xcode/DerivedData/CrashTest-dqvvkzxbpcrgegdqexrtinacoqhw/Build/Products/Release/CrashTest.app/Contents/MacOS/CrashTest",
+              "in_app": true,
+              "image_addr": "0x104e88000",
+              "instruction_addr": "0x104ed71d0",
+              "symbol_addr": "0x104ed6f3c"
+            },
+            {
+              "function": "sleep",
+              "package": "/usr/lib/system/libsystem_c.dylib",
+              "in_app": false,
+              "data": {
+                "category": "system"
+              },
+              "image_addr": "0x184306000",
+              "instruction_addr": "0x18431d6f8",
+              "symbol_addr": "0x18431d6c4"
+            },
+            {
+              "function": "nanosleep",
+              "package": "/usr/lib/system/libsystem_c.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184306000",
+              "instruction_addr": "0x184314714",
+              "symbol_addr": "0x184314638"
+            },
+            {
+              "function": "__semwait_signal",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x1844353c8",
+              "symbol_addr": "0x1844353c0"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x40001000",
+            "fp": "0x16b2bab10",
+            "lr": "0x184314714",
+            "pc": "0x1844353c8",
+            "sp": "0x16b2baae0",
+            "x0": "0xa03",
+            "x1": "0x0",
+            "x10": "0x11",
+            "x11": "0x13c0",
+            "x12": "0x7fb",
+            "x13": "0x7fd",
+            "x14": "0x7ce36050",
+            "x15": "0x7cc35827",
+            "x16": "0x14e",
+            "x17": "0x1f0d8c048",
+            "x18": "0x0",
+            "x19": "0x16b2bab20",
+            "x2": "0x1",
+            "x20": "0x16b2bab30",
+            "x21": "0x104f90000",
+            "x22": "0x203",
+            "x23": "0x104f92b88",
+            "x24": "0x104f92000",
+            "x25": "0x104f92000",
+            "x26": "0x0",
+            "x27": "0x104f92000",
+            "x28": "0x0",
+            "x3": "0x1",
+            "x4": "0x1",
+            "x5": "0x0",
+            "x6": "0x34",
+            "x7": "0x0",
+            "x8": "0x1e8bbc528",
+            "x9": "0x4003"
+          }
+        },
+        "crashed": false,
+        "current": false,
+        "main": false
+      },
+      {
+        "id": 7,
+        "name": "SentryCrash Exception Handler (Secondary)",
+        "stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_start",
+              "symbol": "_pthread_start",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x1844732e0",
+              "symbol_addr": "0x18447325c"
+            },
+            {
+              "function": "handleExceptions",
+              "package": "/Users/macmade/Library/Developer/Xcode/DerivedData/CrashTest-dqvvkzxbpcrgegdqexrtinacoqhw/Build/Products/Release/CrashTest.app/Contents/MacOS/CrashTest",
+              "in_app": true,
+              "data": {
+                "symbolicator_status": "missing"
+              },
+              "image_addr": "0x104e88000",
+              "instruction_addr": "0x104ec0f18",
+              "symbol_addr": "0x104ec0e98"
+            },
+            {
+              "function": "thread_suspend",
+              "symbol": "thread_suspend",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "system",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184461420",
+              "symbol_addr": "0x1844613b8"
+            },
+            {
+              "function": "mach_msg2_internal",
+              "symbol": "mach_msg2_internal",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x1844445cc",
+              "symbol_addr": "0x184444580"
+            },
+            {
+              "function": "mach_msg2_trap",
+              "symbol": "mach_msg2_trap",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184431e34",
+              "symbol_addr": "0x184431e2c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x80001000",
+            "fp": "0x16b346c80",
+            "lr": "0x1844445d0",
+            "pc": "0x184431e34",
+            "sp": "0x16b346c30",
+            "x0": "0x0",
+            "x1": "0x200000003",
+            "x10": "0x0",
+            "x11": "0x0",
+            "x12": "0x0",
+            "x13": "0x0",
+            "x14": "0x0",
+            "x15": "0x0",
+            "x16": "0xffffffffffffffd1",
+            "x17": "0x1f0d8cc70",
+            "x18": "0x0",
+            "x19": "0x0",
+            "x2": "0x1800001513",
+            "x20": "0x2c",
+            "x21": "0xe10300000000",
+            "x22": "0xe1500000000",
+            "x23": "0xe1030000ca03",
+            "x24": "0x16b346c90",
+            "x25": "0x1800001513",
+            "x26": "0x200000003",
+            "x27": "0x200000003",
+            "x28": "0x0",
+            "x3": "0xe1030000ca03",
+            "x4": "0xe1500000000",
+            "x5": "0xe10300000000",
+            "x6": "0x2c",
+            "x7": "0x0",
+            "x8": "0xfffffffffffffbbf",
+            "x9": "0x1e8bbd888"
+          }
+        },
+        "raw_stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_start",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x1844732e4",
+              "symbol_addr": "0x18447325c"
+            },
+            {
+              "function": "handleExceptions",
+              "package": "/Users/macmade/Library/Developer/Xcode/DerivedData/CrashTest-dqvvkzxbpcrgegdqexrtinacoqhw/Build/Products/Release/CrashTest.app/Contents/MacOS/CrashTest",
+              "in_app": true,
+              "image_addr": "0x104e88000",
+              "instruction_addr": "0x104ec0f18",
+              "symbol_addr": "0x104ec0e98"
+            },
+            {
+              "function": "thread_suspend",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "system"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184461424",
+              "symbol_addr": "0x1844613b8"
+            },
+            {
+              "function": "mach_msg2_internal",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x1844445d0",
+              "symbol_addr": "0x184444580"
+            },
+            {
+              "function": "mach_msg2_trap",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184431e34",
+              "symbol_addr": "0x184431e2c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x80001000",
+            "fp": "0x16b346c80",
+            "lr": "0x1844445d0",
+            "pc": "0x184431e34",
+            "sp": "0x16b346c30",
+            "x0": "0x0",
+            "x1": "0x200000003",
+            "x10": "0x0",
+            "x11": "0x0",
+            "x12": "0x0",
+            "x13": "0x0",
+            "x14": "0x0",
+            "x15": "0x0",
+            "x16": "0xffffffffffffffd1",
+            "x17": "0x1f0d8cc70",
+            "x18": "0x0",
+            "x19": "0x0",
+            "x2": "0x1800001513",
+            "x20": "0x2c",
+            "x21": "0xe10300000000",
+            "x22": "0xe1500000000",
+            "x23": "0xe1030000ca03",
+            "x24": "0x16b346c90",
+            "x25": "0x1800001513",
+            "x26": "0x200000003",
+            "x27": "0x200000003",
+            "x28": "0x0",
+            "x3": "0xe1030000ca03",
+            "x4": "0xe1500000000",
+            "x5": "0xe10300000000",
+            "x6": "0x2c",
+            "x7": "0x0",
+            "x8": "0xfffffffffffffbbf",
+            "x9": "0x1e8bbd888"
+          }
+        },
+        "crashed": false,
+        "current": false,
+        "main": false
+      },
+      {
+        "id": 8,
+        "name": "SentryCrash Exception Handler (Primary)",
+        "stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_start",
+              "symbol": "_pthread_start",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x1844732e0",
+              "symbol_addr": "0x18447325c"
+            },
+            {
+              "function": "handleExceptions",
+              "package": "/Users/macmade/Library/Developer/Xcode/DerivedData/CrashTest-dqvvkzxbpcrgegdqexrtinacoqhw/Build/Products/Release/CrashTest.app/Contents/MacOS/CrashTest",
+              "in_app": true,
+              "data": {
+                "symbolicator_status": "missing"
+              },
+              "image_addr": "0x104e88000",
+              "instruction_addr": "0x104ec0f44",
+              "symbol_addr": "0x104ec0e98"
+            },
+            {
+              "function": "mach_msg",
+              "symbol": "mach_msg",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "system",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184432178",
+              "symbol_addr": "0x184432164"
+            },
+            {
+              "function": "mach_msg_overwrite",
+              "symbol": "mach_msg_overwrite",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x18443a9d4",
+              "symbol_addr": "0x18443a7f8"
+            },
+            {
+              "function": "mach_msg2_internal",
+              "symbol": "mach_msg2_internal",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x1844445cc",
+              "symbol_addr": "0x184444580"
+            },
+            {
+              "function": "mach_msg2_trap",
+              "symbol": "mach_msg2_trap",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184431e34",
+              "symbol_addr": "0x184431e2c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x1000",
+            "fp": "0x16b3d2b90",
+            "lr": "0x1844445d0",
+            "pc": "0x184431e34",
+            "sp": "0x16b3d2b40",
+            "x0": "0x16b3d2d20",
+            "x1": "0x400000002",
+            "x10": "0x0",
+            "x11": "0x0",
+            "x12": "0x0",
+            "x13": "0xe303",
+            "x14": "0x0",
+            "x15": "0x0",
+            "x16": "0xffffffffffffffd1",
+            "x17": "0x1f0d8cc70",
+            "x18": "0x0",
+            "x19": "0x0",
+            "x2": "0x0",
+            "x20": "0x244",
+            "x21": "0xe30300000000",
+            "x22": "0x0",
+            "x23": "0x0",
+            "x24": "0x16b3d2d20",
+            "x25": "0x0",
+            "x26": "0x400000002",
+            "x27": "0x400000002",
+            "x28": "0x2",
+            "x3": "0x0",
+            "x4": "0x0",
+            "x5": "0xe30300000000",
+            "x6": "0x244",
+            "x7": "0x0",
+            "x8": "0xfffffffffffffbbf",
+            "x9": "0x244"
+          }
+        },
+        "raw_stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_start",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x1844732e4",
+              "symbol_addr": "0x18447325c"
+            },
+            {
+              "function": "handleExceptions",
+              "package": "/Users/macmade/Library/Developer/Xcode/DerivedData/CrashTest-dqvvkzxbpcrgegdqexrtinacoqhw/Build/Products/Release/CrashTest.app/Contents/MacOS/CrashTest",
+              "in_app": true,
+              "image_addr": "0x104e88000",
+              "instruction_addr": "0x104ec0f44",
+              "symbol_addr": "0x104ec0e98"
+            },
+            {
+              "function": "mach_msg",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "system"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x18443217c",
+              "symbol_addr": "0x184432164"
+            },
+            {
+              "function": "mach_msg_overwrite",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x18443a9d8",
+              "symbol_addr": "0x18443a7f8"
+            },
+            {
+              "function": "mach_msg2_internal",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x1844445d0",
+              "symbol_addr": "0x184444580"
+            },
+            {
+              "function": "mach_msg2_trap",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184431e34",
+              "symbol_addr": "0x184431e2c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x1000",
+            "fp": "0x16b3d2b90",
+            "lr": "0x1844445d0",
+            "pc": "0x184431e34",
+            "sp": "0x16b3d2b40",
+            "x0": "0x16b3d2d20",
+            "x1": "0x400000002",
+            "x10": "0x0",
+            "x11": "0x0",
+            "x12": "0x0",
+            "x13": "0xe303",
+            "x14": "0x0",
+            "x15": "0x0",
+            "x16": "0xffffffffffffffd1",
+            "x17": "0x1f0d8cc70",
+            "x18": "0x0",
+            "x19": "0x0",
+            "x2": "0x0",
+            "x20": "0x244",
+            "x21": "0xe30300000000",
+            "x22": "0x0",
+            "x23": "0x0",
+            "x24": "0x16b3d2d20",
+            "x25": "0x0",
+            "x26": "0x400000002",
+            "x27": "0x400000002",
+            "x28": "0x2",
+            "x3": "0x0",
+            "x4": "0x0",
+            "x5": "0xe30300000000",
+            "x6": "0x244",
+            "x7": "0x0",
+            "x8": "0xfffffffffffffbbf",
+            "x9": "0x244"
+          }
+        },
+        "crashed": false,
+        "current": false,
+        "main": false
+      },
+      {
+        "id": 9,
+        "name": "io.sentry.app-hang-tracker",
+        "stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_start",
+              "symbol": "_pthread_start",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x1844732e0",
+              "symbol_addr": "0x18447325c"
+            },
+            {
+              "function": "__NSThread__start__",
+              "symbol": "__NSThread__start__",
+              "package": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x1856bc000",
+              "instruction_addr": "0x185710840",
+              "symbol_addr": "0x185710570"
+            },
+            {
+              "function": "-[SentryANRTrackerV1 detectANRs]",
+              "symbol": "-[SentryANRTrackerV1 detectANRs]",
+              "package": "/Users/macmade/Library/Developer/Xcode/DerivedData/CrashTest-dqvvkzxbpcrgegdqexrtinacoqhw/Build/Products/Release/CrashTest.app/Contents/MacOS/CrashTest",
+              "in_app": false,
+              "data": {
+                "orig_in_app": 1,
+                "symbolicator_status": "missing"
+              },
+              "image_addr": "0x104e88000",
+              "instruction_addr": "0x104ea40ec",
+              "symbol_addr": "0x104ea3ec8"
+            },
+            {
+              "function": "+[NSThread sleepForTimeInterval:]",
+              "symbol": "+[NSThread sleepForTimeInterval:]",
+              "package": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+              "in_app": false,
+              "data": {
+                "category": "system",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x1856bc000",
+              "instruction_addr": "0x18578cd94",
+              "symbol_addr": "0x18578ccf8"
+            },
+            {
+              "function": "nanosleep",
+              "symbol": "nanosleep",
+              "package": "/usr/lib/system/libsystem_c.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184306000",
+              "instruction_addr": "0x184314710",
+              "symbol_addr": "0x184314638"
+            },
+            {
+              "function": "__semwait_signal",
+              "symbol": "__semwait_signal",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x1844353c8",
+              "symbol_addr": "0x1844353c0"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x80001000",
+            "fp": "0x16b45ebc0",
+            "lr": "0x184314714",
+            "pc": "0x1844353c8",
+            "sp": "0x16b45eb90",
+            "x0": "0xa03",
+            "x1": "0x0",
+            "x10": "0x11",
+            "x11": "0x3",
+            "x12": "0x6000021d51d0",
+            "x13": "0x6000021d51e0",
+            "x14": "0x1e8bd5c08",
+            "x15": "0x1e8bd5c08",
+            "x16": "0x14e",
+            "x17": "0x1f0d8c048",
+            "x18": "0x0",
+            "x19": "0x0",
+            "x2": "0x1",
+            "x20": "0x16b45ebf0",
+            "x21": "0x600003698f30",
+            "x22": "0x600003698f10",
+            "x23": "0x2",
+            "x24": "0x0",
+            "x25": "0x0",
+            "x26": "0x0",
+            "x27": "0xa9263defe7311ab8",
+            "x28": "0x0",
+            "x3": "0x1",
+            "x4": "0x0",
+            "x5": "0x17d78400",
+            "x6": "0x0",
+            "x7": "0x0",
+            "x8": "0x1e8bbc528",
+            "x9": "0x3"
+          }
+        },
+        "raw_stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_start",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x1844732e4",
+              "symbol_addr": "0x18447325c"
+            },
+            {
+              "function": "__NSThread__start__",
+              "package": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x1856bc000",
+              "instruction_addr": "0x185710844",
+              "symbol_addr": "0x185710570"
+            },
+            {
+              "function": "-[SentryANRTrackerV1 detectANRs]",
+              "package": "/Users/macmade/Library/Developer/Xcode/DerivedData/CrashTest-dqvvkzxbpcrgegdqexrtinacoqhw/Build/Products/Release/CrashTest.app/Contents/MacOS/CrashTest",
+              "in_app": false,
+              "data": {
+                "orig_in_app": 1
+              },
+              "image_addr": "0x104e88000",
+              "instruction_addr": "0x104ea40ec",
+              "symbol_addr": "0x104ea3ec8"
+            },
+            {
+              "function": "+[NSThread sleepForTimeInterval:]",
+              "package": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+              "in_app": false,
+              "data": {
+                "category": "system"
+              },
+              "image_addr": "0x1856bc000",
+              "instruction_addr": "0x18578cd98",
+              "symbol_addr": "0x18578ccf8"
+            },
+            {
+              "function": "nanosleep",
+              "package": "/usr/lib/system/libsystem_c.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184306000",
+              "instruction_addr": "0x184314714",
+              "symbol_addr": "0x184314638"
+            },
+            {
+              "function": "__semwait_signal",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x1844353c8",
+              "symbol_addr": "0x1844353c0"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x80001000",
+            "fp": "0x16b45ebc0",
+            "lr": "0x184314714",
+            "pc": "0x1844353c8",
+            "sp": "0x16b45eb90",
+            "x0": "0xa03",
+            "x1": "0x0",
+            "x10": "0x11",
+            "x11": "0x3",
+            "x12": "0x6000021d51d0",
+            "x13": "0x6000021d51e0",
+            "x14": "0x1e8bd5c08",
+            "x15": "0x1e8bd5c08",
+            "x16": "0x14e",
+            "x17": "0x1f0d8c048",
+            "x18": "0x0",
+            "x19": "0x0",
+            "x2": "0x1",
+            "x20": "0x16b45ebf0",
+            "x21": "0x600003698f30",
+            "x22": "0x600003698f10",
+            "x23": "0x2",
+            "x24": "0x0",
+            "x25": "0x0",
+            "x26": "0x0",
+            "x27": "0xa9263defe7311ab8",
+            "x28": "0x0",
+            "x3": "0x1",
+            "x4": "0x0",
+            "x5": "0x17d78400",
+            "x6": "0x0",
+            "x7": "0x0",
+            "x8": "0x1e8bbc528",
+            "x9": "0x3"
+          }
+        },
+        "crashed": false,
+        "current": false,
+        "main": false
+      },
+      {
+        "id": 10,
+        "name": "com.apple.NSEventThread",
+        "stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_start",
+              "symbol": "_pthread_start",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x1844732e0",
+              "symbol_addr": "0x18447325c"
+            },
+            {
+              "function": "_NSEventThread",
+              "symbol": "_NSEventThread",
+              "package": "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x188062000",
+              "instruction_addr": "0x1881c1bc0",
+              "symbol_addr": "0x1881c1b30"
+            },
+            {
+              "function": "CFRunLoopRunSpecific",
+              "symbol": "CFRunLoopRunSpecific",
+              "package": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+              "in_app": false,
+              "data": {
+                "category": "indirection",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x1844dc000",
+              "instruction_addr": "0x184558330",
+              "symbol_addr": "0x1845580f8"
+            },
+            {
+              "function": "__CFRunLoopRun",
+              "symbol": "__CFRunLoopRun",
+              "package": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x1844dc000",
+              "instruction_addr": "0x184558e68",
+              "symbol_addr": "0x1845589b0"
+            },
+            {
+              "function": "__CFRunLoopServiceMachPort",
+              "symbol": "__CFRunLoopServiceMachPort",
+              "package": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x1844dc000",
+              "instruction_addr": "0x18455a5b8",
+              "symbol_addr": "0x18455a51c"
+            },
+            {
+              "function": "mach_msg",
+              "symbol": "mach_msg",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184432178",
+              "symbol_addr": "0x184432164"
+            },
+            {
+              "function": "mach_msg_overwrite",
+              "symbol": "mach_msg_overwrite",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x18443a9d4",
+              "symbol_addr": "0x18443a7f8"
+            },
+            {
+              "function": "mach_msg2_internal",
+              "symbol": "mach_msg2_internal",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x1844445cc",
+              "symbol_addr": "0x184444580"
+            },
+            {
+              "function": "mach_msg2_trap",
+              "symbol": "mach_msg2_trap",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184431e34",
+              "symbol_addr": "0x184431e2c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x1000",
+            "fp": "0x16b4e9fd0",
+            "lr": "0x1844445d0",
+            "pc": "0x184431e34",
+            "sp": "0x16b4e9f80",
+            "x0": "0x16b4ea068",
+            "x1": "0x507000806",
+            "x10": "0x0",
+            "x11": "0x0",
+            "x12": "0x0",
+            "x13": "0xda03",
+            "x14": "0x0",
+            "x15": "0x0",
+            "x16": "0xffffffffffffffd1",
+            "x17": "0x1f0d87b80",
+            "x18": "0x0",
+            "x19": "0xffffffff",
+            "x2": "0x200000000",
+            "x20": "0x2",
+            "x21": "0xda0300000000",
+            "x22": "0x0",
+            "x23": "0xda0300000000",
+            "x24": "0x16b4ea068",
+            "x25": "0x200000000",
+            "x26": "0x507000806",
+            "x27": "0x507000806",
+            "x28": "0x107000806",
+            "x3": "0xda0300000000",
+            "x4": "0x0",
+            "x5": "0xda0300000000",
+            "x6": "0x2",
+            "x7": "0xffffffff",
+            "x8": "0xfffffffffffffbbf",
+            "x9": "0x2"
+          }
+        },
+        "raw_stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_start",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x1844732e4",
+              "symbol_addr": "0x18447325c"
+            },
+            {
+              "function": "_NSEventThread",
+              "package": "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x188062000",
+              "instruction_addr": "0x1881c1bc4",
+              "symbol_addr": "0x1881c1b30"
+            },
+            {
+              "function": "CFRunLoopRunSpecific",
+              "package": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+              "in_app": false,
+              "data": {
+                "category": "indirection"
+              },
+              "image_addr": "0x1844dc000",
+              "instruction_addr": "0x184558334",
+              "symbol_addr": "0x1845580f8"
+            },
+            {
+              "function": "__CFRunLoopRun",
+              "package": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x1844dc000",
+              "instruction_addr": "0x184558e6c",
+              "symbol_addr": "0x1845589b0"
+            },
+            {
+              "function": "__CFRunLoopServiceMachPort",
+              "package": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x1844dc000",
+              "instruction_addr": "0x18455a5bc",
+              "symbol_addr": "0x18455a51c"
+            },
+            {
+              "function": "mach_msg",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x18443217c",
+              "symbol_addr": "0x184432164"
+            },
+            {
+              "function": "mach_msg_overwrite",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x18443a9d8",
+              "symbol_addr": "0x18443a7f8"
+            },
+            {
+              "function": "mach_msg2_internal",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x1844445d0",
+              "symbol_addr": "0x184444580"
+            },
+            {
+              "function": "mach_msg2_trap",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184431e34",
+              "symbol_addr": "0x184431e2c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x1000",
+            "fp": "0x16b4e9fd0",
+            "lr": "0x1844445d0",
+            "pc": "0x184431e34",
+            "sp": "0x16b4e9f80",
+            "x0": "0x16b4ea068",
+            "x1": "0x507000806",
+            "x10": "0x0",
+            "x11": "0x0",
+            "x12": "0x0",
+            "x13": "0xda03",
+            "x14": "0x0",
+            "x15": "0x0",
+            "x16": "0xffffffffffffffd1",
+            "x17": "0x1f0d87b80",
+            "x18": "0x0",
+            "x19": "0xffffffff",
+            "x2": "0x200000000",
+            "x20": "0x2",
+            "x21": "0xda0300000000",
+            "x22": "0x0",
+            "x23": "0xda0300000000",
+            "x24": "0x16b4ea068",
+            "x25": "0x200000000",
+            "x26": "0x507000806",
+            "x27": "0x507000806",
+            "x28": "0x107000806",
+            "x3": "0xda0300000000",
+            "x4": "0x0",
+            "x5": "0xda0300000000",
+            "x6": "0x2",
+            "x7": "0xffffffff",
+            "x8": "0xfffffffffffffbbf",
+            "x9": "0x2"
+          }
+        },
+        "crashed": false,
+        "current": false,
+        "main": false
+      },
+      {
+        "id": 11,
+        "name": "com.apple.NSURLConnectionLoader",
+        "stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_start",
+              "symbol": "_pthread_start",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x1844732e0",
+              "symbol_addr": "0x18447325c"
+            },
+            {
+              "function": "__NSThread__start__",
+              "symbol": "__NSThread__start__",
+              "package": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x1856bc000",
+              "instruction_addr": "0x185710840",
+              "symbol_addr": "0x185710570"
+            },
+            {
+              "function": "+[__CFN_CoreSchedulingSetRunnable _run:]",
+              "symbol": "+[__CFN_CoreSchedulingSetRunnable _run:]",
+              "package": "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x189b5a000",
+              "instruction_addr": "0x189dace80",
+              "symbol_addr": "0x189dacce4"
+            },
+            {
+              "function": "CFRunLoopRunSpecific",
+              "symbol": "CFRunLoopRunSpecific",
+              "package": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x1844dc000",
+              "instruction_addr": "0x184558330",
+              "symbol_addr": "0x1845580f8"
+            },
+            {
+              "function": "__CFRunLoopRun",
+              "symbol": "__CFRunLoopRun",
+              "package": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x1844dc000",
+              "instruction_addr": "0x184558e68",
+              "symbol_addr": "0x1845589b0"
+            },
+            {
+              "function": "__CFRunLoopServiceMachPort",
+              "symbol": "__CFRunLoopServiceMachPort",
+              "package": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x1844dc000",
+              "instruction_addr": "0x18455a5b8",
+              "symbol_addr": "0x18455a51c"
+            },
+            {
+              "function": "mach_msg",
+              "symbol": "mach_msg",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184432178",
+              "symbol_addr": "0x184432164"
+            },
+            {
+              "function": "mach_msg_overwrite",
+              "symbol": "mach_msg_overwrite",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x18443a9d4",
+              "symbol_addr": "0x18443a7f8"
+            },
+            {
+              "function": "mach_msg2_internal",
+              "symbol": "mach_msg2_internal",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x1844445cc",
+              "symbol_addr": "0x184444580"
+            },
+            {
+              "function": "mach_msg2_trap",
+              "symbol": "mach_msg2_trap",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals",
+                "symbolicator_status": "symbolicated"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184431e34",
+              "symbol_addr": "0x184431e2c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x1000",
+            "fp": "0x16b575ca0",
+            "lr": "0x1844445d0",
+            "pc": "0x184431e34",
+            "sp": "0x16b575c50",
+            "x0": "0x16b575d38",
+            "x1": "0x507000806",
+            "x10": "0x0",
+            "x11": "0x0",
+            "x12": "0x0",
+            "x13": "0x11003",
+            "x14": "0x0",
+            "x15": "0x0",
+            "x16": "0xffffffffffffffd1",
+            "x17": "0x1f0d87b80",
+            "x18": "0x0",
+            "x19": "0xffffffff",
+            "x2": "0x200000000",
+            "x20": "0x2",
+            "x21": "0x1100300000000",
+            "x22": "0x0",
+            "x23": "0x1100300000000",
+            "x24": "0x16b575d38",
+            "x25": "0x200000000",
+            "x26": "0x507000806",
+            "x27": "0x507000806",
+            "x28": "0x107000806",
+            "x3": "0x1100300000000",
+            "x4": "0x0",
+            "x5": "0x1100300000000",
+            "x6": "0x2",
+            "x7": "0xffffffff",
+            "x8": "0xfffffffffffffbbf",
+            "x9": "0x2"
+          }
+        },
+        "raw_stacktrace": {
+          "frames": [
+            {
+              "function": "_pthread_start",
+              "package": "/usr/lib/system/libsystem_pthread.dylib",
+              "in_app": false,
+              "data": {
+                "category": "threadbase"
+              },
+              "image_addr": "0x18446c000",
+              "instruction_addr": "0x1844732e4",
+              "symbol_addr": "0x18447325c"
+            },
+            {
+              "function": "__NSThread__start__",
+              "package": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x1856bc000",
+              "instruction_addr": "0x185710844",
+              "symbol_addr": "0x185710570"
+            },
+            {
+              "function": "+[__CFN_CoreSchedulingSetRunnable _run:]",
+              "package": "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x189b5a000",
+              "instruction_addr": "0x189dace84",
+              "symbol_addr": "0x189dacce4"
+            },
+            {
+              "function": "CFRunLoopRunSpecific",
+              "package": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x1844dc000",
+              "instruction_addr": "0x184558334",
+              "symbol_addr": "0x1845580f8"
+            },
+            {
+              "function": "__CFRunLoopRun",
+              "package": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x1844dc000",
+              "instruction_addr": "0x184558e6c",
+              "symbol_addr": "0x1845589b0"
+            },
+            {
+              "function": "__CFRunLoopServiceMachPort",
+              "package": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x1844dc000",
+              "instruction_addr": "0x18455a5bc",
+              "symbol_addr": "0x18455a51c"
+            },
+            {
+              "function": "mach_msg",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x18443217c",
+              "symbol_addr": "0x184432164"
+            },
+            {
+              "function": "mach_msg_overwrite",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x18443a9d8",
+              "symbol_addr": "0x18443a7f8"
+            },
+            {
+              "function": "mach_msg2_internal",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x1844445d0",
+              "symbol_addr": "0x184444580"
+            },
+            {
+              "function": "mach_msg2_trap",
+              "package": "/usr/lib/system/libsystem_kernel.dylib",
+              "in_app": false,
+              "data": {
+                "category": "internals"
+              },
+              "image_addr": "0x184431000",
+              "instruction_addr": "0x184431e34",
+              "symbol_addr": "0x184431e2c"
+            }
+          ],
+          "registers": {
+            "cpsr": "0x1000",
+            "fp": "0x16b575ca0",
+            "lr": "0x1844445d0",
+            "pc": "0x184431e34",
+            "sp": "0x16b575c50",
+            "x0": "0x16b575d38",
+            "x1": "0x507000806",
+            "x10": "0x0",
+            "x11": "0x0",
+            "x12": "0x0",
+            "x13": "0x11003",
+            "x14": "0x0",
+            "x15": "0x0",
+            "x16": "0xffffffffffffffd1",
+            "x17": "0x1f0d87b80",
+            "x18": "0x0",
+            "x19": "0xffffffff",
+            "x2": "0x200000000",
+            "x20": "0x2",
+            "x21": "0x1100300000000",
+            "x22": "0x0",
+            "x23": "0x1100300000000",
+            "x24": "0x16b575d38",
+            "x25": "0x200000000",
+            "x26": "0x507000806",
+            "x27": "0x507000806",
+            "x28": "0x107000806",
+            "x3": "0x1100300000000",
+            "x4": "0x0",
+            "x5": "0x1100300000000",
+            "x6": "0x2",
+            "x7": "0xffffffff",
+            "x8": "0xfffffffffffffbbf",
+            "x9": "0x2"
+          }
+        },
+        "crashed": false,
+        "current": false,
+        "main": false
+      }
+    ]
+  },
+  "timestamp": 1730193557,
+  "title": "C++ Exception: St13runtime_error",
+  "type": "error",
+  "user": {
+    "id": "EAF02A4E-70D6-40E8-9055-A8D89DD5E263",
+    "ip_address": "178.197.194.69",
+    "sentry_user": "id:EAF02A4E-70D6-40E8-9055-A8D89DD5E263",
+    "geo": {
+      "country_code": "CH",
+      "city": "Lausanne",
+      "subdivision": "Vaud",
+      "region": "Switzerland"
+    }
+  },
+  "version": "7",
+  "location": null
+}
