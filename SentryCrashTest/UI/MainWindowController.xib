@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,7 +50,7 @@
                             </customView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-9T-aak">
                                 <rect key="frame" x="91" y="299" width="219" height="32"/>
-                                <buttonCell key="cell" type="push" title="Objective-C Exception" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Aam-i2-FPB">
+                                <buttonCell key="cell" type="push" title="Objective-C Exception" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Aam-i2-FPB">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -59,7 +60,7 @@
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lQk-jp-KTZ">
                                 <rect key="frame" x="91" y="271" width="219" height="32"/>
-                                <buttonCell key="cell" type="push" title="C++ Exception" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6E2-N5-kge">
+                                <buttonCell key="cell" type="push" title="C++ Exception" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6E2-N5-kge">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -69,7 +70,7 @@
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="37K-hw-R1s">
                                 <rect key="frame" x="91" y="243" width="219" height="32"/>
-                                <buttonCell key="cell" type="push" title="Segmentation Fault / Bus Error" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EuH-Rx-wzs">
+                                <buttonCell key="cell" type="push" title="Segmentation Fault / Bus Error" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EuH-Rx-wzs">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -79,7 +80,7 @@
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qrD-5Q-2Qm">
                                 <rect key="frame" x="91" y="215" width="219" height="32"/>
-                                <buttonCell key="cell" type="push" title="Abort" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jIP-1V-g0h">
+                                <buttonCell key="cell" type="push" title="Abort" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jIP-1V-g0h">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -89,7 +90,7 @@
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kr9-vw-TyD">
                                 <rect key="frame" x="91" y="187" width="219" height="32"/>
-                                <buttonCell key="cell" type="push" title="Stack Overflow" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9ha-Ej-BV4">
+                                <buttonCell key="cell" type="push" title="Stack Overflow" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9ha-Ej-BV4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -99,7 +100,7 @@
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P7p-ze-Rxl">
                                 <rect key="frame" x="91" y="159" width="219" height="32"/>
-                                <buttonCell key="cell" type="push" title="Swift Fatal Error" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WVv-PT-rgd">
+                                <buttonCell key="cell" type="push" title="Swift Fatal Error" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WVv-PT-rgd">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -109,7 +110,7 @@
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QYN-sA-KSw">
                                 <rect key="frame" x="91" y="131" width="219" height="32"/>
-                                <buttonCell key="cell" type="push" title="Swift Exception" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UhM-Mw-ijH">
+                                <buttonCell key="cell" type="push" title="Swift Exception" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UhM-Mw-ijH">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -119,7 +120,7 @@
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GRg-rg-am0">
                                 <rect key="frame" x="91" y="103" width="219" height="32"/>
-                                <buttonCell key="cell" type="push" title="Swift Unwrap" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HxB-yk-gdc">
+                                <buttonCell key="cell" type="push" title="Swift Unwrap" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HxB-yk-gdc">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -129,7 +130,7 @@
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ae2-P0-3HM">
                                 <rect key="frame" x="91" y="75" width="219" height="32"/>
-                                <buttonCell key="cell" type="push" title="Swift Overflow" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YMt-uh-DLa">
+                                <buttonCell key="cell" type="push" title="Swift Overflow" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YMt-uh-DLa">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -139,7 +140,7 @@
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O2l-YA-xrJ">
                                 <rect key="frame" x="91" y="47" width="219" height="32"/>
-                                <buttonCell key="cell" type="push" title="Main Thread Hang" bezelStyle="rounded" imagePosition="right" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aZd-KW-CjC">
+                                <buttonCell key="cell" type="push" title="Main Thread Hang" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aZd-KW-CjC">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>

@@ -62,7 +62,6 @@ public extension CrashHelper
                 NSLocalizedFailureReasonErrorKey:      "hello, world - NSLocalizedFailureReasonErrorKey",
                 NSLocalizedRecoverySuggestionErrorKey: "hello, world - NSLocalizedRecoverySuggestionErrorKey",
                 NSDebugDescriptionErrorKey:            "hello, world - NSDebugDescriptionErrorKey",
-                NSLocalizedFailureErrorKey:            "hello, world - NSLocalizedFailureErrorKey",
                 NSLocalizedDescriptionKey:             "hello, world - NSLocalizedDescriptionKey",
             ]
         )

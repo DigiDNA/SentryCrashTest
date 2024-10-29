@@ -140,10 +140,24 @@ public class MainWindowController: NSWindowController
         }
         else
         {
-            Thread.detachNewThread
-            {
-                execute()
-            }
+            Thread.detachNewThreadSelector( #selector( self.performCrashOnThread ), toTarget: self, with: ThreadExecuteInfo( action: execute ) )
+        }
+    }
+
+    @objc
+    private func performCrashOnThread( _ info: ThreadExecuteInfo )
+    {
+        info.action()
+    }
+
+    @objc
+    private class ThreadExecuteInfo: NSObject
+    {
+        public var action: () -> Void
+
+        public init( action: @escaping () -> Void )
+        {
+            self.action = action
         }
     }
 }
