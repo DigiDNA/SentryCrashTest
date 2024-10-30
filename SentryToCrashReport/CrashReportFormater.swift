@@ -46,17 +46,18 @@ public class CrashReportFormater: CustomStringConvertible
     {
         self.format( info:
             [
-                ( "Identifier",     self.report.app.identifier ),
-                ( "Version",        "\( self.report.app.version ) (\( self.report.app.build )" ),
-                ( "Code Type",      "" ),
-                ( "Parent Process", "" ),
-                ( "User ID",        "" ),
+                ( "Identifier:",     self.report.app.identifier ),
+                ( "Version:",        "\( self.report.app.version ) (\( self.report.app.build )" ),
+                ( "Code Type:",      "" ),
+                ( "Parent Process:", "" ),
+                ( "User ID:",        "" ),
                 ( "",               "" ),
-                ( "Date/Time",      "" ),
-                ( "OS Version",     "\( self.report.system.name ) \( self.report.system.version ) (\( self.report.system.build ))" ),
-                ( "Anonymous UUID", "" ),
+                ( "Date/Time:",      "" ),
+                ( "OS Version:",     "\( self.report.system.name ) \( self.report.system.version ) (\( self.report.system.build ))" ),
+                ( "Anonymous UUID:", "" ),
             ]
         )
+        .joined( separator: "\n" )
     }
 
     public var threads: String
@@ -68,7 +69,7 @@ public class CrashReportFormater: CustomStringConvertible
         .joined( separator: "\n\n" )
     }
 
-    private func format( info: [ ( String, String ) ] ) -> String
+    private func format( info: [ ( String, String ) ] ) -> [ String ]
     {
         let max = info.reduce( 0 ) { $0 < $1.0.count ? $1.0.count : $0 }
 
@@ -79,11 +80,32 @@ public class CrashReportFormater: CustomStringConvertible
                 return ""
             }
 
-            let key = "\( $0.0 ):".padding( toLength: max + 1, withPad: " ", startingAt: 0 )
+            let key = $0.0.padding( toLength: max, withPad: " ", startingAt: 0 )
 
             return "\( key ) \( $0.1 )"
         }
-        .joined( separator: "\n" )
+    }
+
+    private func format( info: [ ( String, String, String ) ] ) -> [ String ]
+    {
+        let first = self.format( info: info.map { ( $0.0, $0.1 ) } )
+        let last  = first.enumerated().map
+        {
+            ( $0.element, info[ $0.offset ].2 )
+        }
+
+        return self.format( info: last )
+    }
+
+    private func format( info: [ ( String, String, String, String ) ] ) -> [ String ]
+    {
+        let first = self.format( info: info.map { ( $0.0, $0.1 ) } )
+        let last  = first.enumerated().map
+        {
+            ( $0.element, info[ $0.offset ].2, info[ $0.offset ].3 )
+        }
+
+        return self.format( info: last )
     }
 
     private func format( thread: ThreadInfo ) -> String
@@ -116,17 +138,18 @@ public class CrashReportFormater: CustomStringConvertible
 
     private func format( stacktrace: Stacktrace ) -> String
     {
-        stacktrace.frames.enumerated().map
+        let frames = stacktrace.frames.enumerated().map
         {
-            self.format( stackframe: $0.element, index: $0.offset )
+            let url = URL( filePath: $0.element.package )
+
+            return (
+                "\( $0.offset )",
+                url.lastPathComponent,
+                String( format: "0x%016X", $0.element.instructionAddress ),
+                $0.element.function
+            )
         }
-        .joined( separator: "\n" )
-    }
 
-    private func format( stackframe: Stackframe, index: Int ) -> String
-    {
-        let package = URL( filePath: stackframe.package )
-
-        return "\( index )    \( package.lastPathComponent )    \( stackframe.function )"
+        return self.format( info: frames ).joined( separator: "\n" )
     }
 }
