@@ -22,23 +22,26 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
-import ArgumentParser
 import Foundation
 
-struct Options: ParsableArguments
+public class SystemInfo
 {
-    @Argument( help: "A JSON crash report from Sentry" ) var report: String
-}
+    public private( set ) var name:    String
+    public private( set ) var version: String
+    public private( set ) var build:   String
 
-let options = Options.parseOrExit()
+    public init( dictionary: [ String: Any ] ) throws
+    {
+        guard let name    = dictionary[ "name" ] as? String,
+              let version = dictionary[ "version" ] as? String,
+              let build   = dictionary[ "build" ] as? String
+        else
+        {
+            throw RuntimeError( message: "Invalid system context data" )
+        }
 
-do
-{
-    let report = try CrashReport( url: URL( filePath: options.report ) )
-
-    print( CrashReportFormater( report: report ).description )
-}
-catch
-{
-    print( "Error: \( error.localizedDescription )" )
+        self.name    = name
+        self.version = version
+        self.build   = build
+    }
 }

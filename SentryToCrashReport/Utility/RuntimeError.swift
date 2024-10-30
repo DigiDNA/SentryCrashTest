@@ -24,42 +24,22 @@
 
 import Foundation
 
-public class Stackframe
+public class RuntimeError: LocalizedError, CustomStringConvertible
 {
-    public private( set ) var function:           String
-    public private( set ) var package:            String
-    public private( set ) var symbolAddress:      UInt64 = 0
-    public private( set ) var imageAddress:       UInt64 = 0
-    public private( set ) var instructionAddress: UInt64 = 0
-    public private( set ) var inApp:              Bool
+    public private( set ) var message: String
 
-    public init?( dictionary: [ String: Any ] )
+    public init( message: String )
     {
-        guard let function = dictionary[ "function" ] as? String,
-              let package  = dictionary[ "package" ]  as? String,
-              let inApp    = dictionary[ "in_app" ]   as? Bool
-        else
-        {
-            return nil
-        }
+        self.message = message
+    }
 
-        if let address = dictionary[ "symbol_addr" ] as? String
-        {
-            self.symbolAddress = UInt64( string: address ) ?? 0
-        }
+    public var errorDescription: String?
+    {
+        self.message
+    }
 
-        if let address = dictionary[ "image_addr" ] as? String
-        {
-            self.imageAddress = UInt64( string: address ) ?? 0
-        }
-
-        if let address = dictionary[ "instruction_addr" ] as? String
-        {
-            self.instructionAddress = UInt64( string: address ) ?? 0
-        }
-
-        self.function = function
-        self.package  = package
-        self.inApp    = inApp
+    public var description: String
+    {
+        self.message
     }
 }

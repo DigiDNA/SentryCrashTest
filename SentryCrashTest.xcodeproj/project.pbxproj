@@ -24,6 +24,13 @@
 		05FA6E962CD15AC100421ED6 /* Stacktrace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA6E952CD15ABE00421ED6 /* Stacktrace.swift */; };
 		05FA6E982CD15DDB00421ED6 /* Stackframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA6E972CD15DDA00421ED6 /* Stackframe.swift */; };
 		05FA6E9A2CD15FD400421ED6 /* UInt64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA6E992CD15FCD00421ED6 /* UInt64.swift */; };
+		05FA6E9C2CD22FD000421ED6 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA6E9B2CD22FCE00421ED6 /* Register.swift */; };
+		05FA6E9E2CD230FB00421ED6 /* CrashReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA6E9D2CD230F800421ED6 /* CrashReport.swift */; };
+		05FA6EA02CD2316400421ED6 /* RuntimeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA6E9F2CD2316200421ED6 /* RuntimeError.swift */; };
+		05FA6EA22CD232D000421ED6 /* CrashReportFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA6EA12CD232CF00421ED6 /* CrashReportFormater.swift */; };
+		05FA6EA62CD235DD00421ED6 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA6EA52CD235DC00421ED6 /* AppInfo.swift */; };
+		05FA6EA82CD2373F00421ED6 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA6EA72CD2373C00421ED6 /* DeviceInfo.swift */; };
+		05FA6EAA2CD237A400421ED6 /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA6EA92CD2379F00421ED6 /* SystemInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -106,6 +113,13 @@
 		05FA6E952CD15ABE00421ED6 /* Stacktrace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stacktrace.swift; sourceTree = "<group>"; };
 		05FA6E972CD15DDA00421ED6 /* Stackframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stackframe.swift; sourceTree = "<group>"; };
 		05FA6E992CD15FCD00421ED6 /* UInt64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UInt64.swift; sourceTree = "<group>"; };
+		05FA6E9B2CD22FCE00421ED6 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		05FA6E9D2CD230F800421ED6 /* CrashReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashReport.swift; sourceTree = "<group>"; };
+		05FA6E9F2CD2316200421ED6 /* RuntimeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeError.swift; sourceTree = "<group>"; };
+		05FA6EA12CD232CF00421ED6 /* CrashReportFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashReportFormater.swift; sourceTree = "<group>"; };
+		05FA6EA52CD235DC00421ED6 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		05FA6EA72CD2373C00421ED6 /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		05FA6EA92CD2379F00421ED6 /* SystemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,14 +333,37 @@
 		05FA6E8B2CD140C800421ED6 /* SentryToCrashReport */ = {
 			isa = PBXGroup;
 			children = (
-				05FA6E902CD1419400421ED6 /* report.json */,
+				05FA6EA32CD2347A00421ED6 /* Report */,
+				05FA6EA42CD2349300421ED6 /* Utility */,
+				05FA6EA12CD232CF00421ED6 /* CrashReportFormater.swift */,
 				05FA6E8A2CD140C800421ED6 /* main.swift */,
-				05FA6E972CD15DDA00421ED6 /* Stackframe.swift */,
-				05FA6E952CD15ABE00421ED6 /* Stacktrace.swift */,
-				05FA6E922CD144E100421ED6 /* ThreadInfo.swift */,
-				05FA6E992CD15FCD00421ED6 /* UInt64.swift */,
+				05FA6E902CD1419400421ED6 /* report.json */,
 			);
 			path = SentryToCrashReport;
+			sourceTree = "<group>";
+		};
+		05FA6EA32CD2347A00421ED6 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				05FA6EA52CD235DC00421ED6 /* AppInfo.swift */,
+				05FA6E9D2CD230F800421ED6 /* CrashReport.swift */,
+				05FA6EA72CD2373C00421ED6 /* DeviceInfo.swift */,
+				05FA6E9B2CD22FCE00421ED6 /* Register.swift */,
+				05FA6E972CD15DDA00421ED6 /* Stackframe.swift */,
+				05FA6E952CD15ABE00421ED6 /* Stacktrace.swift */,
+				05FA6EA92CD2379F00421ED6 /* SystemInfo.swift */,
+				05FA6E922CD144E100421ED6 /* ThreadInfo.swift */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		05FA6EA42CD2349300421ED6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				05FA6E9F2CD2316200421ED6 /* RuntimeError.swift */,
+				05FA6E992CD15FCD00421ED6 /* UInt64.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,11 +482,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05FA6EA02CD2316400421ED6 /* RuntimeError.swift in Sources */,
+				05FA6EA62CD235DD00421ED6 /* AppInfo.swift in Sources */,
+				05FA6E9C2CD22FD000421ED6 /* Register.swift in Sources */,
 				05FA6E982CD15DDB00421ED6 /* Stackframe.swift in Sources */,
+				05FA6EAA2CD237A400421ED6 /* SystemInfo.swift in Sources */,
+				05FA6EA82CD2373F00421ED6 /* DeviceInfo.swift in Sources */,
 				05FA6E962CD15AC100421ED6 /* Stacktrace.swift in Sources */,
 				05FA6E9A2CD15FD400421ED6 /* UInt64.swift in Sources */,
+				05FA6E9E2CD230FB00421ED6 /* CrashReport.swift in Sources */,
 				05FA6E8C2CD140C800421ED6 /* main.swift in Sources */,
 				05FA6E932CD144E400421ED6 /* ThreadInfo.swift in Sources */,
+				05FA6EA22CD232D000421ED6 /* CrashReportFormater.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

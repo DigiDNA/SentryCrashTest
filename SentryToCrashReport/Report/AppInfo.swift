@@ -24,41 +24,31 @@
 
 import Foundation
 
-public class ThreadInfo
+public class AppInfo
 {
-    public private( set ) var main:          Bool
-    public private( set ) var id:            Int
-    public private( set ) var name:          String?
-    public private( set ) var current:       Bool
-    public private( set ) var crashed:       Bool
-    public private( set ) var rawStacktrace: Stacktrace?
-    public private( set ) var stacktrace:    Stacktrace?
+    public private( set ) var startTime:  Date
+    public private( set ) var identifier: String
+    public private( set ) var name:       String
+    public private( set ) var version:    String
+    public private( set ) var build:      String
 
-    public init?( dictionary: [ String: Any ] )
+    public init( dictionary: [ String: Any ] ) throws
     {
-        guard let id      = dictionary[ "id" ]      as? Int,
-              let main    = dictionary[ "main" ]    as? Bool,
-              let current = dictionary[ "current" ] as? Bool,
-              let crashed = dictionary[ "crashed" ] as? Bool
+        guard let startTime  = dictionary[ "app_start_time" ] as? String,
+              let startTime  = ISO8601DateFormatter().date( from: startTime ),
+              let identifier = dictionary[ "app_identifier" ] as? String,
+              let name       = dictionary[ "app_name" ] as? String,
+              let version    = dictionary[ "app_version" ] as? String,
+              let build      = dictionary[ "app_build" ] as? String
         else
         {
-            return nil
+            throw RuntimeError( message: "Invalid app context data" )
         }
 
-        self.id      = id
-        self.name    = dictionary[ "name" ] as? String
-        self.main    = main
-        self.current = current
-        self.crashed = crashed
-
-        if let stacktrace = dictionary[ "raw_stacktrace" ] as? [ String: Any ]
-        {
-            self.rawStacktrace = Stacktrace( dictionary: stacktrace )
-        }
-
-        if let stacktrace = dictionary[ "stacktrace" ] as? [ String: Any ]
-        {
-            self.stacktrace = Stacktrace( dictionary: stacktrace )
-        }
+        self.startTime  = startTime
+        self.identifier = identifier
+        self.name       = name
+        self.version    = version
+        self.build      = build
     }
 }

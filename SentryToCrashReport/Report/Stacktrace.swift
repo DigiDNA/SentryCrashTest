@@ -22,23 +22,30 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
-import ArgumentParser
 import Foundation
 
-struct Options: ParsableArguments
+public class Stacktrace
 {
-    @Argument( help: "A JSON crash report from Sentry" ) var report: String
-}
+    public private( set ) var frames:    [ Stackframe ]
+    public private( set ) var registers: [ Register ]
 
-let options = Options.parseOrExit()
+    public init( dictionary: [ String: Any ] ) throws
+    {
+        guard let registers = dictionary[ "registers" ] as? [ String: String ],
+              let frames    = dictionary[ "frames" ]    as? [ [ String: Any ] ]
+        else
+        {
+            throw RuntimeError( message: "Invalid stacktrace data" )
+        }
 
-do
-{
-    let report = try CrashReport( url: URL( filePath: options.report ) )
+        self.frames = try frames.compactMap
+        {
+            try Stackframe( dictionary: $0 )
+        }
 
-    print( CrashReportFormater( report: report ).description )
-}
-catch
-{
-    print( "Error: \( error.localizedDescription )" )
+        self.registers = try registers.compactMap
+        {
+            try Register( info: $0 )
+        }
+    }
 }

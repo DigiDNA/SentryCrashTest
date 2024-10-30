@@ -22,23 +22,44 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
-import ArgumentParser
 import Foundation
 
-struct Options: ParsableArguments
+public class Stackframe
 {
-    @Argument( help: "A JSON crash report from Sentry" ) var report: String
-}
+    public private( set ) var function:           String
+    public private( set ) var package:            String
+    public private( set ) var symbolAddress:      UInt64 = 0
+    public private( set ) var imageAddress:       UInt64 = 0
+    public private( set ) var instructionAddress: UInt64 = 0
+    public private( set ) var inApp:              Bool
 
-let options = Options.parseOrExit()
+    public init( dictionary: [ String: Any ] ) throws
+    {
+        guard let function = dictionary[ "function" ] as? String,
+              let package  = dictionary[ "package" ]  as? String,
+              let inApp    = dictionary[ "in_app" ]   as? Bool
+        else
+        {
+            throw RuntimeError( message: "Invalid stackframe data" )
+        }
 
-do
-{
-    let report = try CrashReport( url: URL( filePath: options.report ) )
+        if let address = dictionary[ "symbol_addr" ] as? String
+        {
+            self.symbolAddress = UInt64( string: address ) ?? 0
+        }
 
-    print( CrashReportFormater( report: report ).description )
-}
-catch
-{
-    print( "Error: \( error.localizedDescription )" )
+        if let address = dictionary[ "image_addr" ] as? String
+        {
+            self.imageAddress = UInt64( string: address ) ?? 0
+        }
+
+        if let address = dictionary[ "instruction_addr" ] as? String
+        {
+            self.instructionAddress = UInt64( string: address ) ?? 0
+        }
+
+        self.function = function
+        self.package  = package
+        self.inApp    = inApp
+    }
 }

@@ -24,28 +24,41 @@
 
 import Foundation
 
-public class Stacktrace
+public class ThreadInfo
 {
-    public private( set ) var frames:    [ Stackframe ]
-    public private( set ) var registers: [ String: UInt64 ]
+    public private( set ) var main:          Bool
+    public private( set ) var id:            Int
+    public private( set ) var name:          String?
+    public private( set ) var current:       Bool
+    public private( set ) var crashed:       Bool
+    public private( set ) var rawStacktrace: Stacktrace?
+    public private( set ) var stacktrace:    Stacktrace?
 
-    public init?( dictionary: [ String: Any ] )
+    public init( dictionary: [ String: Any ] ) throws
     {
-        guard let registers = dictionary[ "registers" ] as? [ String: String ],
-              let frames    = dictionary[ "frames" ]    as? [ [ String: Any ] ]
+        guard let id      = dictionary[ "id" ]      as? Int,
+              let main    = dictionary[ "main" ]    as? Bool,
+              let current = dictionary[ "current" ] as? Bool,
+              let crashed = dictionary[ "crashed" ] as? Bool
         else
         {
-            return nil
+            throw RuntimeError( message: "Invalid thread data" )
         }
 
-        self.frames = frames.compactMap
+        self.id      = id
+        self.name    = dictionary[ "name" ] as? String
+        self.main    = main
+        self.current = current
+        self.crashed = crashed
+
+        if let stacktrace = dictionary[ "raw_stacktrace" ] as? [ String: Any ]
         {
-            Stackframe( dictionary: $0 )
+            self.rawStacktrace = try Stacktrace( dictionary: stacktrace )
         }
 
-        self.registers = registers.compactMapValues
+        if let stacktrace = dictionary[ "stacktrace" ] as? [ String: Any ]
         {
-            UInt64( string: $0 )
+            self.stacktrace = try Stacktrace( dictionary: stacktrace )
         }
     }
 }

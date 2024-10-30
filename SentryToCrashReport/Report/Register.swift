@@ -22,23 +22,23 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
-import ArgumentParser
 import Foundation
 
-struct Options: ParsableArguments
+public class Register
 {
-    @Argument( help: "A JSON crash report from Sentry" ) var report: String
-}
+    public private( set ) var name:  String
+    public private( set ) var value: UInt64
 
-let options = Options.parseOrExit()
+    public init( info: ( key: String, value: Any ) ) throws
+    {
+        guard let value = info.value as? String,
+              let value = UInt64( string: value )
+        else
+        {
+            throw RuntimeError( message: "Invalid register data" )
+        }
 
-do
-{
-    let report = try CrashReport( url: URL( filePath: options.report ) )
-
-    print( CrashReportFormater( report: report ).description )
-}
-catch
-{
-    print( "Error: \( error.localizedDescription )" )
+        self.name  = info.key
+        self.value = value
+    }
 }
