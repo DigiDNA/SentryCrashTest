@@ -38,6 +38,7 @@ public class CrashReportFormater: CustomStringConvertible
         [
             self.info,
             self.threads,
+            self.registers,
         ]
         .joined( separator: "\n\n" )
     }
@@ -51,10 +52,10 @@ public class CrashReportFormater: CustomStringConvertible
                 ( "Code Type:",      "" ),
                 ( "Parent Process:", "" ),
                 ( "User ID:",        "" ),
-                ( "",               "" ),
+                ( "",                "" ),
                 ( "Date/Time:",      "" ),
                 ( "OS Version:",     "\( self.report.system.name ) \( self.report.system.version ) (\( self.report.system.build ))" ),
-                ( "Anonymous UUID:", "" ),
+                ( "Anonymous UUID:", self.report.user.id ),
             ]
         )
         .joined( separator: "\n" )
@@ -67,6 +68,34 @@ public class CrashReportFormater: CustomStringConvertible
             self.format( thread: $0 )
         }
         .joined( separator: "\n\n" )
+    }
+
+    public var registers: String
+    {
+        guard let thread = self.report.threads.first( where: { $0.crashed } ),
+              let trace  = thread.stacktrace ?? thread.rawStacktrace
+        else
+        {
+            return ""
+        }
+
+        let max       = trace.registers.reduce( 0 ) { $0 < $1.name.count ? $1.name.count : $0 }
+        let registers = trace.registers.map
+        {
+            let pad   = String( repeating: " ", count: max - $0.name.count )
+            let value = String( format: "%016X", $0.value )
+
+            return "\( pad )\( $0.name ): \( value )"
+        }
+        .enumerated()
+        .reduce( "" )
+        {
+            let values = [ $0, $1.element ].joined( separator: " " )
+
+            return ( ( $1.offset + 1 ) % 4 ) == 0 ? "\( values )\n" : values
+        }
+
+        return registers
     }
 
     private func format( info: [ ( String, String ) ] ) -> [ String ]
@@ -140,11 +169,18 @@ public class CrashReportFormater: CustomStringConvertible
     {
         let frames = stacktrace.frames.enumerated().map
         {
-            let url = URL( filePath: $0.element.package )
+            let package = if let package = $0.element.package
+            {
+                URL( filePath: package ).lastPathComponent
+            }
+            else
+            {
+                "<unknown>"
+            }
 
             return (
                 "\( $0.offset )",
-                url.lastPathComponent,
+                package,
                 String( format: "0x%016X", $0.element.instructionAddress ),
                 $0.element.function
             )

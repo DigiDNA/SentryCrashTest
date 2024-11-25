@@ -13,6 +13,7 @@
 		051EB49C2CCF9C9E004837E2 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 051EB49B2CCF9C9E004837E2 /* Sentry */; };
 		051EB4A42CCFA0FA004837E2 /* CrashHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 051EB4A32CCFA0FA004837E2 /* CrashHelper.mm */; };
 		051EB4A62CCFA542004837E2 /* CrashHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051EB4A52CCFA542004837E2 /* CrashHelper.swift */; };
+		055F9AEA2CD5227200DDD549 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F9AE92CD5226C00DDD549 /* UserInfo.swift */; };
 		0570D3E82CCFE22100449D87 /* CrashReportWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0570D3E72CCFE22100449D87 /* CrashReportWindowController.swift */; };
 		0570D3EA2CCFE22700449D87 /* CrashReportWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0570D3E92CCFE22700449D87 /* CrashReportWindowController.xib */; };
 		0570D3EC2CD0E15A00449D87 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0570D3EB2CD0E15A00449D87 /* MainWindowController.swift */; };
@@ -56,6 +57,7 @@
 		051EB4A22CCFA0FA004837E2 /* CrashHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrashHelper.h; sourceTree = "<group>"; };
 		051EB4A32CCFA0FA004837E2 /* CrashHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CrashHelper.mm; sourceTree = "<group>"; };
 		051EB4A52CCFA542004837E2 /* CrashHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashHelper.swift; sourceTree = "<group>"; };
+		055F9AE92CD5226C00DDD549 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		0570D3E72CCFE22100449D87 /* CrashReportWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashReportWindowController.swift; sourceTree = "<group>"; };
 		0570D3E92CCFE22700449D87 /* CrashReportWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CrashReportWindowController.xib; sourceTree = "<group>"; };
 		0570D3EB2CD0E15A00449D87 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 				05FA6E952CD15ABE00421ED6 /* Stacktrace.swift */,
 				05FA6EA92CD2379F00421ED6 /* SystemInfo.swift */,
 				05FA6E922CD144E100421ED6 /* ThreadInfo.swift */,
+				055F9AE92CD5226C00DDD549 /* UserInfo.swift */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				05FA6EA82CD2373F00421ED6 /* DeviceInfo.swift in Sources */,
 				05FA6E962CD15AC100421ED6 /* Stacktrace.swift in Sources */,
 				05FA6E9A2CD15FD400421ED6 /* UInt64.swift in Sources */,
+				055F9AEA2CD5227200DDD549 /* UserInfo.swift in Sources */,
 				05FA6E9E2CD230FB00421ED6 /* CrashReport.swift in Sources */,
 				05FA6E8C2CD140C800421ED6 /* main.swift in Sources */,
 				05FA6E932CD144E400421ED6 /* ThreadInfo.swift in Sources */,

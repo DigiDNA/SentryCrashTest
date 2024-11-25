@@ -29,6 +29,7 @@ public class CrashReport
     public private( set ) var app:     AppInfo
     public private( set ) var device:  DeviceInfo
     public private( set ) var system:  SystemInfo
+    public private( set ) var user:    UserInfo
     public private( set ) var threads: [ ThreadInfo ]
 
     public convenience  init( url: URL ) throws
@@ -67,6 +68,7 @@ public class CrashReport
               let app      = contexts[ "app" ]        as? [ String: Any ],
               let device   = contexts[ "device" ]     as? [ String: Any ],
               let os       = contexts[ "os" ]         as? [ String: Any ],
+              let user     = dictionary[ "user" ]     as? [ String: Any ],
               let threads  = dictionary[ "threads" ]  as? [ String: Any ],
               let threads  = threads[ "values" ]      as? [ [ String: Any ] ]
         else
@@ -77,6 +79,7 @@ public class CrashReport
         self.app     = try AppInfo( dictionary: app )
         self.device  = try DeviceInfo( dictionary: device )
         self.system  = try SystemInfo( dictionary: os )
+        self.user    = try UserInfo( dictionary: user )
         self.threads = try threads.map
         {
             try ThreadInfo( dictionary: $0 )
