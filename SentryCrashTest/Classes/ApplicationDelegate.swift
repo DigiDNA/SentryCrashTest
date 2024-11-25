@@ -30,12 +30,45 @@ public class ApplicationDelegate: NSObject, NSApplicationDelegate
 {
     private var mainWindowController       = MainWindowController()
     private var crashReportWindowController: CrashReportWindowController?
+    private var trackingObserver:            NSKeyValueObservation?
 
     public func applicationDidFinishLaunching( _ aNotification: Notification )
     {
         self.mainWindowController.window?.center()
         self.mainWindowController.window?.makeKeyAndOrderFront( nil )
 
+        self.trackingObserver = self.mainWindowController.observe( \.enableSessionTracking )
+        {
+            _, _ in self.restartSentry()
+        }
+
+        self.startSentry()
+    }
+
+    public func applicationWillTerminate( _ aNotification: Notification )
+    {}
+
+    public func applicationShouldTerminateAfterLastWindowClosed( _ sender: NSApplication ) -> Bool
+    {
+        true
+    }
+
+    private func showCrashReportWindow( event: Event )
+    {
+        self.crashReportWindowController = CrashReportWindowController( event: event )
+
+        self.crashReportWindowController?.window?.center()
+        self.crashReportWindowController?.window?.makeKeyAndOrderFront( nil )
+    }
+
+    private func restartSentry()
+    {
+        SentrySDK.close()
+        self.startSentry()
+    }
+
+    private func startSentry()
+    {
         SentrySDK.start
         {
             options in
@@ -48,6 +81,8 @@ public class ApplicationDelegate: NSObject, NSApplicationDelegate
 
             options.tracesSampleRate   = 1.0
             options.profilesSampleRate = 1.0
+
+            options.enableAutoSessionTracking = self.mainWindowController.enableSessionTracking
 
             options.onCrashedLastRun =
             {
@@ -71,21 +106,5 @@ public class ApplicationDelegate: NSObject, NSApplicationDelegate
                 return nil
             }
         }
-    }
-
-    public func applicationWillTerminate( _ aNotification: Notification )
-    {}
-
-    public func applicationShouldTerminateAfterLastWindowClosed( _ sender: NSApplication ) -> Bool
-    {
-        true
-    }
-
-    private func showCrashReportWindow( event: Event )
-    {
-        self.crashReportWindowController = CrashReportWindowController( event: event )
-
-        self.crashReportWindowController?.window?.center()
-        self.crashReportWindowController?.window?.makeKeyAndOrderFront( nil )
     }
 }

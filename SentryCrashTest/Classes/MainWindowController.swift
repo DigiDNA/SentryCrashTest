@@ -27,7 +27,21 @@ import Sentry
 
 public class MainWindowController: NSWindowController
 {
-    @objc private dynamic var crashOnMainThread = true
+    @objc public dynamic var crashOnMainThread = UserDefaults.standard.bool( forKey: "CrashOnMainThread" )
+    {
+        didSet
+        {
+            UserDefaults.standard.set( self.crashOnMainThread, forKey: "CrashOnMainThread" )
+        }
+    }
+
+    @objc public dynamic var enableSessionTracking = UserDefaults.standard.bool( forKey: "EnableSessionTracking" )
+    {
+        didSet
+        {
+            UserDefaults.standard.set( self.enableSessionTracking, forKey: "EnableSessionTracking" )
+        }
+    }
 
     public init()
     {
