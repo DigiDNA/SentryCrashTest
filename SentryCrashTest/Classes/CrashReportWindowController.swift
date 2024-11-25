@@ -51,11 +51,16 @@ public class CrashReportWindowController: NSWindowController
     @IBAction
     private func sendReport( _ sender: Any? )
     {
-        let id                = SentrySDK.capture( event: self.event )
-        let userFeedback      = UserFeedback( eventId: id )
-        userFeedback.comments = self.textView?.string ?? "N/A"
+        let id = SentrySDK.capture( event: self.event )
 
-        SentrySDK.capture( userFeedback: userFeedback )
+        if let comments = self.textView?.string, comments.isEmpty == false
+        {
+            let userFeedback      = UserFeedback( eventId: id )
+            userFeedback.comments = comments
+
+            SentrySDK.capture( userFeedback: userFeedback )
+        }
+
         self.window?.close()
     }
 }
