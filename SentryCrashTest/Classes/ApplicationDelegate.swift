@@ -73,16 +73,16 @@ public class ApplicationDelegate: NSObject, NSApplicationDelegate
         {
             options in
 
-            options.dsn = "https://2ece6bf9843a3a1bddd234f98b670aea@o4508199831863296.ingest.de.sentry.io/4508199836581968"
+            options.dsn                       = "https://2ece6bf9843a3a1bddd234f98b670aea@o4508199831863296.ingest.de.sentry.io/4508199836581968"
+            options.enabled                   = true
+            options.enableCrashHandler        = true
+            options.tracesSampleRate          = 1.0
+            options.profilesSampleRate        = 1.0
+            options.enableAutoSessionTracking = self.mainWindowController.enableSessionTracking
 
             #if DEBUG
                 options.debug = true
             #endif
-
-            options.tracesSampleRate   = 1.0
-            options.profilesSampleRate = 1.0
-
-            options.enableAutoSessionTracking = self.mainWindowController.enableSessionTracking
 
             options.onCrashedLastRun =
             {
@@ -92,6 +92,8 @@ public class ApplicationDelegate: NSObject, NSApplicationDelegate
             options.beforeSend =
             {
                 event in
+                
+                event.user?.userId = "AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE"
 
                 if let previous = self.crashReportWindowController?.event, event === previous
                 {
