@@ -664,7 +664,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0570D42C2CD0FEB700449D87 /* Debug.xcconfig */;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = Debug;
 		};
@@ -672,7 +672,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0570D4302CD0FEB700449D87 /* Release.xcconfig */;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = Release;
 		};
@@ -692,7 +692,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.SentryCrashTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -716,7 +715,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.SentryCrashTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
